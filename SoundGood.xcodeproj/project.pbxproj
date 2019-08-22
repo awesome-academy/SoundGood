@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14E18A4E230E3AD700AA6241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E18A4D230E3AD700AA6241 /* AppDelegate.swift */; };
+		14E18A50230E3AD700AA6241 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E18A4F230E3AD700AA6241 /* ViewController.swift */; };
+		14E18A53230E3AD700AA6241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E18A51230E3AD700AA6241 /* Main.storyboard */; };
+		14E18A56230E3AD700AA6241 /* SoundGood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14E18A54230E3AD700AA6241 /* SoundGood.xcdatamodeld */; };
+		14E18A58230E3AD800AA6241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14E18A57230E3AD800AA6241 /* Assets.xcassets */; };
+		14E18A5B230E3AD800AA6241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E18A59230E3AD800AA6241 /* LaunchScreen.storyboard */; };
+		7A2148168E9AB1CFA038CEB1 /* Pods_SoundGood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676DA365DC03B9E36D5B6113 /* Pods_SoundGood.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14E18A4A230E3AD700AA6241 /* SoundGood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundGood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14E18A4D230E3AD700AA6241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14E18A4F230E3AD700AA6241 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14E18A52230E3AD700AA6241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14E18A55230E3AD700AA6241 /* SoundGood.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SoundGood.xcdatamodel; sourceTree = "<group>"; };
+		14E18A57230E3AD800AA6241 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14E18A5A230E3AD800AA6241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14E18A5C230E3AD800AA6241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		676DA365DC03B9E36D5B6113 /* Pods_SoundGood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundGood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5580A609AEDB3EA97FF233C /* Pods-SoundGood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundGood.debug.xcconfig"; path = "Target Support Files/Pods-SoundGood/Pods-SoundGood.debug.xcconfig"; sourceTree = "<group>"; };
+		EEC0F87891AECE3B4E1FF7A2 /* Pods-SoundGood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundGood.release.xcconfig"; path = "Target Support Files/Pods-SoundGood/Pods-SoundGood.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14E18A47230E3AD700AA6241 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A2148168E9AB1CFA038CEB1 /* Pods_SoundGood.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14E18A41230E3AD700AA6241 = {
+			isa = PBXGroup;
+			children = (
+				14E18A4C230E3AD700AA6241 /* SoundGood */,
+				14E18A4B230E3AD700AA6241 /* Products */,
+				A7F1995662604B6A44ECE80E /* Pods */,
+				6FE0B6F741A1DEEB6068A1D7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		14E18A4B230E3AD700AA6241 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14E18A4A230E3AD700AA6241 /* SoundGood.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14E18A4C230E3AD700AA6241 /* SoundGood */ = {
+			isa = PBXGroup;
+			children = (
+				14E18A62230E3BE500AA6241 /* Application */,
+				14E18A63230E3BF300AA6241 /* Common */,
+				14E18A64230E3BFA00AA6241 /* Data */,
+				14E18A6B230E3C3A00AA6241 /* Extensions */,
+				14E18A5C230E3AD800AA6241 /* Info.plist */,
+				14E18A6C230E3C4100AA6241 /* Repositories */,
+				14E18A6E230E3C6C00AA6241 /* Resources */,
+				14E18A6D230E3C4800AA6241 /* Scenes */,
+				14E18A6F230E3C7400AA6241 /* Utils */,
+				14E18A70230E3C8000AA6241 /* Widgets */,
+			);
+			path = SoundGood;
+			sourceTree = "<group>";
+		};
+		14E18A62230E3BE500AA6241 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				14E18A4D230E3AD700AA6241 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		14E18A63230E3BF300AA6241 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		14E18A64230E3BFA00AA6241 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				14E18A66230E3C1400AA6241 /* Source */,
+				14E18A65230E3C0B00AA6241 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		14E18A65230E3C0B00AA6241 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				14E18A54230E3AD700AA6241 /* SoundGood.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		14E18A66230E3C1400AA6241 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				14E18A68230E3C2400AA6241 /* Remote */,
+				14E18A67230E3C1E00AA6241 /* Local */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		14E18A67230E3C1E00AA6241 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		14E18A68230E3C2400AA6241 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				14E18A6A230E3C2C00AA6241 /* Service */,
+				14E18A69230E3C2800AA6241 /* API */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		14E18A69230E3C2800AA6241 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		14E18A6A230E3C2C00AA6241 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		14E18A6B230E3C3A00AA6241 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		14E18A6C230E3C4100AA6241 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		14E18A6D230E3C4800AA6241 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				14E18A4F230E3AD700AA6241 /* ViewController.swift */,
+				14E18A51230E3AD700AA6241 /* Main.storyboard */,
+				14E18A59230E3AD800AA6241 /* LaunchScreen.storyboard */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		14E18A6E230E3C6C00AA6241 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				14E18A57230E3AD800AA6241 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		14E18A6F230E3C7400AA6241 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		14E18A70230E3C8000AA6241 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		6FE0B6F741A1DEEB6068A1D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				676DA365DC03B9E36D5B6113 /* Pods_SoundGood.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7F1995662604B6A44ECE80E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5580A609AEDB3EA97FF233C /* Pods-SoundGood.debug.xcconfig */,
+				EEC0F87891AECE3B4E1FF7A2 /* Pods-SoundGood.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14E18A49230E3AD700AA6241 /* SoundGood */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14E18A5F230E3AD800AA6241 /* Build configuration list for PBXNativeTarget "SoundGood" */;
+			buildPhases = (
+				584CDEFB3DF6B9B7FE3D6D8C /* [CP] Check Pods Manifest.lock */,
+				14E18A46230E3AD700AA6241 /* Sources */,
+				14E18A47230E3AD700AA6241 /* Frameworks */,
+				14E18A48230E3AD700AA6241 /* Resources */,
+				35F772F4DDDE10616BD088A3 /* [CP] Embed Pods Frameworks */,
+				14E18A71230E3CB400AA6241 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoundGood;
+			productName = SoundGood;
+			productReference = 14E18A4A230E3AD700AA6241 /* SoundGood.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14E18A42230E3AD700AA6241 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Sun Asterisk";
+				TargetAttributes = {
+					14E18A49230E3AD700AA6241 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = 14E18A45230E3AD700AA6241 /* Build configuration list for PBXProject "SoundGood" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14E18A41230E3AD700AA6241;
+			productRefGroup = 14E18A4B230E3AD700AA6241 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14E18A49230E3AD700AA6241 /* SoundGood */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14E18A48230E3AD700AA6241 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14E18A5B230E3AD800AA6241 /* LaunchScreen.storyboard in Resources */,
+				14E18A58230E3AD800AA6241 /* Assets.xcassets in Resources */,
+				14E18A53230E3AD700AA6241 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14E18A71230E3CB400AA6241 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		35F772F4DDDE10616BD088A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SoundGood/Pods-SoundGood-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SoundGood/Pods-SoundGood-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SoundGood/Pods-SoundGood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		584CDEFB3DF6B9B7FE3D6D8C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoundGood-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14E18A46230E3AD700AA6241 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14E18A50230E3AD700AA6241 /* ViewController.swift in Sources */,
+				14E18A4E230E3AD700AA6241 /* AppDelegate.swift in Sources */,
+				14E18A56230E3AD700AA6241 /* SoundGood.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		14E18A51230E3AD700AA6241 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14E18A52230E3AD700AA6241 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		14E18A59230E3AD800AA6241 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14E18A5A230E3AD800AA6241 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14E18A5D230E3AD800AA6241 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		14E18A5E230E3AD800AA6241 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14E18A60230E3AD800AA6241 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5580A609AEDB3EA97FF233C /* Pods-SoundGood.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SoundGood/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sun.SoundGood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14E18A61230E3AD800AA6241 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEC0F87891AECE3B4E1FF7A2 /* Pods-SoundGood.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SoundGood/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sun.SoundGood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14E18A45230E3AD700AA6241 /* Build configuration list for PBXProject "SoundGood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14E18A5D230E3AD800AA6241 /* Debug */,
+				14E18A5E230E3AD800AA6241 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14E18A5F230E3AD800AA6241 /* Build configuration list for PBXNativeTarget "SoundGood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14E18A60230E3AD800AA6241 /* Debug */,
+				14E18A61230E3AD800AA6241 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		14E18A54230E3AD700AA6241 /* SoundGood.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				14E18A55230E3AD700AA6241 /* SoundGood.xcdatamodel */,
+			);
+			currentVersion = 14E18A55230E3AD700AA6241 /* SoundGood.xcdatamodel */;
+			path = SoundGood.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 14E18A42230E3AD700AA6241 /* Project object */;
+}
