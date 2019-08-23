@@ -30,19 +30,15 @@ enum BaseError: Error {
     }
 
     private func getHttpErrorMessage(httpCode: Int) -> String? {
-        if httpCode >= 300 && httpCode <= 308 {
-            // Redirection
+        switch httpCode {
+        case 300...308:
             return "It was transferred to a different URL. I'm sorry for causing you trouble"
-        }
-        if httpCode >= 400 && httpCode <= 451 {
-            // Client error
+        case 400...451:
             return "An error occurred on the application side. Please try again later!"
-        }
-        if httpCode >= 500 && httpCode <= 511 {
-            // Server error
+        case 500...511:
             return "A server error occurred. Please try again later!"
+        default:
+            return "An error occurred. Please try again later!"
         }
-        // Unofficial error
-        return "An error occurred. Please try again later!"
     }
 }
