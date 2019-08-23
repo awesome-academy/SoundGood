@@ -7,16 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14D227F4230E76510023D2C3 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D227F3230E76510023D2C3 /* BaseModel.swift */; };
+		14D227F6230E785F0023D2C3 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D227F5230E785F0023D2C3 /* LocalDataSource.swift */; };
+		14D227F8230E78A50023D2C3 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D227F7230E78A50023D2C3 /* RemoteDataSource.swift */; };
+		14D227FA230E7A340023D2C3 /* TrackRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D227F9230E7A340023D2C3 /* TrackRepository.swift */; };
+		14D227FF230E7C270023D2C3 /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D227FE230E7C270023D2C3 /* BaseError.swift */; };
+		14D22801230E7D230023D2C3 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D22800230E7D230023D2C3 /* ErrorResponse.swift */; };
+		14D22804230E7E180023D2C3 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D22803230E7E180023D2C3 /* BaseRequest.swift */; };
 		14E18A4E230E3AD700AA6241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E18A4D230E3AD700AA6241 /* AppDelegate.swift */; };
 		14E18A50230E3AD700AA6241 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E18A4F230E3AD700AA6241 /* ViewController.swift */; };
 		14E18A53230E3AD700AA6241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E18A51230E3AD700AA6241 /* Main.storyboard */; };
 		14E18A56230E3AD700AA6241 /* SoundGood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14E18A54230E3AD700AA6241 /* SoundGood.xcdatamodeld */; };
 		14E18A58230E3AD800AA6241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14E18A57230E3AD800AA6241 /* Assets.xcassets */; };
 		14E18A5B230E3AD800AA6241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E18A59230E3AD800AA6241 /* LaunchScreen.storyboard */; };
+		14E18A7A230E669700AA6241 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E18A79230E669700AA6241 /* Constant.swift */; };
 		7A2148168E9AB1CFA038CEB1 /* Pods_SoundGood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676DA365DC03B9E36D5B6113 /* Pods_SoundGood.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14D227F3230E76510023D2C3 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		14D227F5230E785F0023D2C3 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
+		14D227F7230E78A50023D2C3 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
+		14D227F9230E7A340023D2C3 /* TrackRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRepository.swift; sourceTree = "<group>"; };
+		14D227FE230E7C270023D2C3 /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
+		14D22800230E7D230023D2C3 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		14D22803230E7E180023D2C3 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		14E18A4A230E3AD700AA6241 /* SoundGood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundGood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E18A4D230E3AD700AA6241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14E18A4F230E3AD700AA6241 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +40,7 @@
 		14E18A57230E3AD800AA6241 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14E18A5A230E3AD800AA6241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14E18A5C230E3AD800AA6241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14E18A79230E669700AA6241 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		676DA365DC03B9E36D5B6113 /* Pods_SoundGood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundGood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5580A609AEDB3EA97FF233C /* Pods-SoundGood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundGood.debug.xcconfig"; path = "Target Support Files/Pods-SoundGood/Pods-SoundGood.debug.xcconfig"; sourceTree = "<group>"; };
 		EEC0F87891AECE3B4E1FF7A2 /* Pods-SoundGood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundGood.release.xcconfig"; path = "Target Support Files/Pods-SoundGood/Pods-SoundGood.release.xcconfig"; sourceTree = "<group>"; };
@@ -42,6 +58,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14D227FB230E7BFE0023D2C3 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				14D227FE230E7C270023D2C3 /* BaseError.swift */,
+				14D22800230E7D230023D2C3 /* ErrorResponse.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		14D227FC230E7C050023D2C3 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				14D22803230E7E180023D2C3 /* BaseRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		14D227FD230E7C160023D2C3 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		14D22802230E7DFD0023D2C3 /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Middleware;
+			sourceTree = "<group>";
+		};
 		14E18A41230E3AD700AA6241 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				14E18A4D230E3AD700AA6241 /* AppDelegate.swift */,
+				14E18A79230E669700AA6241 /* Constant.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -105,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				14E18A54230E3AD700AA6241 /* SoundGood.xcdatamodeld */,
+				14D227F3230E76510023D2C3 /* BaseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,6 +170,7 @@
 		14E18A67230E3C1E00AA6241 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				14D227F5230E785F0023D2C3 /* LocalDataSource.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -130,6 +180,7 @@
 			children = (
 				14E18A6A230E3C2C00AA6241 /* Service */,
 				14E18A69230E3C2800AA6241 /* API */,
+				14D227F7230E78A50023D2C3 /* RemoteDataSource.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -137,6 +188,10 @@
 		14E18A69230E3C2800AA6241 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				14D22802230E7DFD0023D2C3 /* Middleware */,
+				14D227FD230E7C160023D2C3 /* Response */,
+				14D227FC230E7C050023D2C3 /* Request */,
+				14D227FB230E7BFE0023D2C3 /* Error */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -158,6 +213,7 @@
 		14E18A6C230E3C4100AA6241 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				14D227F9230E7A340023D2C3 /* TrackRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -344,9 +400,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14D227F6230E785F0023D2C3 /* LocalDataSource.swift in Sources */,
 				14E18A50230E3AD700AA6241 /* ViewController.swift in Sources */,
 				14E18A4E230E3AD700AA6241 /* AppDelegate.swift in Sources */,
+				14D227F8230E78A50023D2C3 /* RemoteDataSource.swift in Sources */,
 				14E18A56230E3AD700AA6241 /* SoundGood.xcdatamodeld in Sources */,
+				14D22801230E7D230023D2C3 /* ErrorResponse.swift in Sources */,
+				14D22804230E7E180023D2C3 /* BaseRequest.swift in Sources */,
+				14D227FA230E7A340023D2C3 /* TrackRepository.swift in Sources */,
+				14E18A7A230E669700AA6241 /* Constant.swift in Sources */,
+				14D227FF230E7C270023D2C3 /* BaseError.swift in Sources */,
+				14D227F4230E76510023D2C3 /* BaseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +565,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sun.SoundGood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SOUNDCLOUD_API = "/Users/dang.thanh.dat/Documents/Training Projects/SoundGood/BuildConfig";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -519,6 +584,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sun.SoundGood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SOUNDCLOUD_API = "/Users/dang.thanh.dat/Documents/Training Projects/SoundGood/BuildConfig";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
