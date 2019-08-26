@@ -18,18 +18,18 @@ class HomeViewController: UIViewController {
         setupTableView()
     }
 
-    func setupTableView() {
-        trackTableView.dataSource = self
-        trackTableView.register(cellType: TrackTableViewCell.self)
-    }
-
     @IBAction func segmentActionChanged(_ sender: Any) {
         trackTableView.reloadData()
     }
+
+    private func setupTableView() {
+        trackTableView.dataSource = self
+        trackTableView.register(cellType: TrackTableViewCell.self)
+    }
 }
 
+// MARK: - Table view data source
 extension HomeViewController: UITableViewDataSource {
-    // MARK: - Table view data source
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
