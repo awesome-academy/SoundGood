@@ -18,6 +18,10 @@ class HomeViewController: UIViewController {
         setupTableView()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.topItem?.title = "Home"
+    }
+
     @IBAction func segmentActionChanged(_ sender: Any) {
         trackTableView.reloadData()
     }
