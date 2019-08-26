@@ -9,11 +9,11 @@
 import UIKit
 import Reusable
 
-class TrackTableViewCell: UITableViewCell, NibReusable {
+final class TrackTableViewCell: UITableViewCell, NibReusable {
 
-    @IBOutlet weak var trackImage: UIImageView!
-    @IBOutlet weak var trackTitle: UILabel!
-    @IBOutlet weak var trackArtist: UILabel!
+    @IBOutlet private weak var trackImage: UIImageView!
+    @IBOutlet private weak var trackTitle: UILabel!
+    @IBOutlet private weak var trackArtist: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
