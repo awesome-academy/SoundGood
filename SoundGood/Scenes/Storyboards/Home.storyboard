@@ -13,27 +13,44 @@
         <!--Home-->
         <scene sceneID="DQB-eL-pMq">
             <objects>
-                <viewController storyboardIdentifier="Home" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0I1-a7-liD" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0I1-a7-liD" customClass="HomeViewController" customModule="SoundGood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g7g-tm-jud">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvY-ag-k8h">
-                                <rect key="frame" x="184" y="418.5" width="46" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ckm-sW-zE7">
+                                <rect key="frame" x="0.0" y="72" width="414" height="824"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ViU-YT-L9c">
+                                <rect key="frame" x="0.0" y="44" width="414" height="29"/>
+                                <segments>
+                                    <segment title="New &amp; Hot"/>
+                                    <segment title="Top 50"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentActionChanged:" destination="0I1-a7-liD" eventType="valueChanged" id="sqd-8u-clZ"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bvY-ag-k8h" firstAttribute="centerX" secondItem="gw0-er-UD0" secondAttribute="centerX" id="OdF-gd-bxj"/>
-                            <constraint firstItem="bvY-ag-k8h" firstAttribute="centerY" secondItem="gw0-er-UD0" secondAttribute="centerY" id="tqv-ou-7Lp"/>
+                            <constraint firstAttribute="bottom" secondItem="ckm-sW-zE7" secondAttribute="bottom" id="0Pb-Wy-8vK"/>
+                            <constraint firstItem="ckm-sW-zE7" firstAttribute="top" secondItem="ViU-YT-L9c" secondAttribute="bottom" id="7or-Dx-tr6"/>
+                            <constraint firstItem="ckm-sW-zE7" firstAttribute="leading" secondItem="gw0-er-UD0" secondAttribute="leading" id="N4N-hS-oHa"/>
+                            <constraint firstItem="ViU-YT-L9c" firstAttribute="leading" secondItem="gw0-er-UD0" secondAttribute="leading" id="fDR-I3-coL"/>
+                            <constraint firstItem="ckm-sW-zE7" firstAttribute="trailing" secondItem="gw0-er-UD0" secondAttribute="trailing" id="fui-bZ-ykA"/>
+                            <constraint firstItem="ViU-YT-L9c" firstAttribute="trailing" secondItem="gw0-er-UD0" secondAttribute="trailing" id="oKn-cm-YbQ"/>
+                            <constraint firstItem="ViU-YT-L9c" firstAttribute="top" secondItem="gw0-er-UD0" secondAttribute="top" id="pw1-Fk-0z9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gw0-er-UD0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="2Rq-93-cEM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="segmentController" destination="ViU-YT-L9c" id="8Sy-Zf-0cr"/>
+                        <outlet property="trackTableView" destination="ckm-sW-zE7" id="uDi-MB-SSR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7y-1I-4fg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

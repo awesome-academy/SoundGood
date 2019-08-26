@@ -10,6 +10,9 @@
 		147D1614230FBBB500150D56 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147D1613230FBBB500150D56 /* Search.storyboard */; };
 		147D1616230FBDB400150D56 /* Genre.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147D1615230FBDB400150D56 /* Genre.storyboard */; };
 		147D1618230FBFB700150D56 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147D1617230FBFB700150D56 /* Setting.storyboard */; };
+		147D1621230FD23100150D56 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147D161F230FD23100150D56 /* TrackTableViewCell.swift */; };
+		147D1622230FD23100150D56 /* TrackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147D1620230FD23100150D56 /* TrackTableViewCell.xib */; };
+		147D1624230FD2CF00150D56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147D1623230FD2CF00150D56 /* HomeViewController.swift */; };
 		14C05283230F8D1100B74529 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C05282230F8D1100B74529 /* Home.storyboard */; };
 		14D227F4230E76510023D2C3 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D227F3230E76510023D2C3 /* BaseModel.swift */; };
 		14D227F6230E785F0023D2C3 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D227F5230E785F0023D2C3 /* LocalDataSource.swift */; };
@@ -32,6 +35,9 @@
 		147D1613230FBBB500150D56 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		147D1615230FBDB400150D56 /* Genre.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Genre.storyboard; sourceTree = "<group>"; };
 		147D1617230FBFB700150D56 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		147D161F230FD23100150D56 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
+		147D1620230FD23100150D56 /* TrackTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackTableViewCell.xib; sourceTree = "<group>"; };
+		147D1623230FD2CF00150D56 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		14C05282230F8D1100B74529 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		14D227F3230E76510023D2C3 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		14D227F5230E785F0023D2C3 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
@@ -66,6 +72,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		147D161E230FD21900150D56 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				147D161F230FD23100150D56 /* TrackTableViewCell.swift */,
+				147D1623230FD2CF00150D56 /* HomeViewController.swift */,
+				147D1620230FD23100150D56 /* TrackTableViewCell.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		14C05281230F765D00B74529 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +258,7 @@
 		14E18A6D230E3C4800AA6241 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				147D161E230FD21900150D56 /* Home */,
 				14C05281230F765D00B74529 /* Storyboards */,
 				14E18A4F230E3AD700AA6241 /* ViewController.swift */,
 			);
@@ -355,6 +372,7 @@
 				14C05283230F8D1100B74529 /* Home.storyboard in Resources */,
 				147D1616230FBDB400150D56 /* Genre.storyboard in Resources */,
 				147D1614230FBBB500150D56 /* Search.storyboard in Resources */,
+				147D1622230FD23100150D56 /* TrackTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,9 +449,11 @@
 				14E18A56230E3AD700AA6241 /* SoundGood.xcdatamodeld in Sources */,
 				14D22801230E7D230023D2C3 /* ErrorResponse.swift in Sources */,
 				14D22804230E7E180023D2C3 /* BaseRequest.swift in Sources */,
+				147D1621230FD23100150D56 /* TrackTableViewCell.swift in Sources */,
 				14D227FA230E7A340023D2C3 /* TrackRepository.swift in Sources */,
 				14E18A7A230E669700AA6241 /* Constant.swift in Sources */,
 				14D227FF230E7C270023D2C3 /* BaseError.swift in Sources */,
+				147D1624230FD2CF00150D56 /* HomeViewController.swift in Sources */,
 				14D227F4230E76510023D2C3 /* BaseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
