@@ -11,7 +11,7 @@ import Reusable
 
 final class GenreTableViewCell: UITableViewCell, NibReusable {
 
-    @IBOutlet weak var genreTitleLabel: UILabel!
+    @IBOutlet private weak var genreTitleLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

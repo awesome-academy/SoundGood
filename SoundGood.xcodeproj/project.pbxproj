@@ -22,6 +22,10 @@
 		14D227FF230E7C270023D2C3 /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D227FE230E7C270023D2C3 /* BaseError.swift */; };
 		14D22801230E7D230023D2C3 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D22800230E7D230023D2C3 /* ErrorResponse.swift */; };
 		14D22804230E7E180023D2C3 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D22803230E7E180023D2C3 /* BaseRequest.swift */; };
+		14DB21A52314C64300B65091 /* GenreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB21A42314C64300B65091 /* GenreDataSource.swift */; };
+		14DB21A72314C7D200B65091 /* GenreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB21A62314C7D200B65091 /* GenreRepository.swift */; };
+		14DB21AA2314CA1300B65091 /* GenreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB21A92314CA1300B65091 /* GenreViewModel.swift */; };
+		14DB21AC2314E88900B65091 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB21AB2314E88900B65091 /* Genre.swift */; };
 		14E18A4E230E3AD700AA6241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E18A4D230E3AD700AA6241 /* AppDelegate.swift */; };
 		14E18A53230E3AD700AA6241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E18A51230E3AD700AA6241 /* Main.storyboard */; };
 		14E18A56230E3AD700AA6241 /* SoundGood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14E18A54230E3AD700AA6241 /* SoundGood.xcdatamodeld */; };
@@ -49,6 +53,10 @@
 		14D227FE230E7C270023D2C3 /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
 		14D22800230E7D230023D2C3 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		14D22803230E7E180023D2C3 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		14DB21A42314C64300B65091 /* GenreDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreDataSource.swift; sourceTree = "<group>"; };
+		14DB21A62314C7D200B65091 /* GenreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreRepository.swift; sourceTree = "<group>"; };
+		14DB21A92314CA1300B65091 /* GenreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreViewModel.swift; sourceTree = "<group>"; };
+		14DB21AB2314E88900B65091 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		14E18A4A230E3AD700AA6241 /* SoundGood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundGood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E18A4D230E3AD700AA6241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14E18A52230E3AD700AA6241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -140,6 +148,14 @@
 			path = Middleware;
 			sourceTree = "<group>";
 		};
+		14DB21A82314C9DF00B65091 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				14DB21A92314CA1300B65091 /* GenreViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		14E18A41230E3AD700AA6241 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +177,7 @@
 		14E18A4C230E3AD700AA6241 /* SoundGood */ = {
 			isa = PBXGroup;
 			children = (
+				14DB21A82314C9DF00B65091 /* ViewModels */,
 				14E18A62230E3BE500AA6241 /* Application */,
 				14E18A63230E3BF300AA6241 /* Common */,
 				14E18A64230E3BFA00AA6241 /* Data */,
@@ -205,6 +222,7 @@
 			children = (
 				14E18A54230E3AD700AA6241 /* SoundGood.xcdatamodeld */,
 				14D227F3230E76510023D2C3 /* BaseModel.swift */,
+				14DB21AB2314E88900B65091 /* Genre.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				14D227F5230E785F0023D2C3 /* LocalDataSource.swift */,
+				14DB21A42314C64300B65091 /* GenreDataSource.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -265,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				14D227F9230E7A340023D2C3 /* TrackRepository.swift */,
+				14DB21A62314C7D200B65091 /* GenreRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -458,12 +478,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				14683A5123139AD4007C0AFC /* GenreViewController.swift in Sources */,
+				14DB21A72314C7D200B65091 /* GenreRepository.swift in Sources */,
 				14D227F6230E785F0023D2C3 /* LocalDataSource.swift in Sources */,
 				14E18A4E230E3AD700AA6241 /* AppDelegate.swift in Sources */,
 				14D227F8230E78A50023D2C3 /* RemoteDataSource.swift in Sources */,
+				14DB21A52314C64300B65091 /* GenreDataSource.swift in Sources */,
 				14E18A56230E3AD700AA6241 /* SoundGood.xcdatamodeld in Sources */,
 				14F768D32313B4ED007C9C8C /* GenreTableViewCell.swift in Sources */,
 				14D22801230E7D230023D2C3 /* ErrorResponse.swift in Sources */,
+				14DB21AC2314E88900B65091 /* Genre.swift in Sources */,
 				14D22804230E7E180023D2C3 /* BaseRequest.swift in Sources */,
 				147D1621230FD23100150D56 /* TrackTableViewCell.swift in Sources */,
 				14D227FA230E7A340023D2C3 /* TrackRepository.swift in Sources */,
@@ -471,6 +494,7 @@
 				14D227FF230E7C270023D2C3 /* BaseError.swift in Sources */,
 				147D1624230FD2CF00150D56 /* HomeViewController.swift in Sources */,
 				14D227F4230E76510023D2C3 /* BaseModel.swift in Sources */,
+				14DB21AA2314CA1300B65091 /* GenreViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
