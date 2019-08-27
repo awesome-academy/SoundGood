@@ -7,16 +7,12 @@
 //
 
 protocol GenreDataSource {
-    func getGenreTitles(genres: [String: String]) -> [String]
+    func getGenres() -> [Genre]
 }
 
 struct GenreLocalDataSource: GenreDataSource {
 
-    func getGenreTitles(genres: [String: String]) -> [String] {
-        var titles = [String]()
-        genres.forEach { pair in
-            titles.append(pair.value)
-        }
-        return titles
+    func getGenres() -> [Genre] {
+        return Constant.genres
     }
 }

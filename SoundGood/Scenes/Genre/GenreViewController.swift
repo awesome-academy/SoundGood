@@ -20,14 +20,13 @@ class GenreViewController: UIViewController {
         let viewModel = GenreViewModel(repository: repository)
         return viewModel
     }()
-    private var titles = [String]()
+    private var genres = [Genre]()
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        titles = viewModel.getGenreTitles(genres: Constant.genres)
-        titles.sort()
+        getData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -38,17 +37,24 @@ class GenreViewController: UIViewController {
         genreTableView.dataSource = self
         genreTableView.register(cellType: GenreTableViewCell.self)
     }
+
+    private func getData() {
+        genres = viewModel.getGenres()
+        genres.sort {
+            $0.title < $1.title
+        }
+    }
 }
 
 // MARK: - TableView data source
 extension GenreViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return titles.count
+        return genres.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: GenreTableViewCell = genreTableView.dequeueReusableCell(for: indexPath)
-        cell.setup(title: titles[indexPath.row])
+        cell.setup(title: genres[indexPath.row].title)
         return cell
     }
 }

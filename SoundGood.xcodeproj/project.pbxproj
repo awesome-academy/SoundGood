@@ -25,6 +25,7 @@
 		14DB21A52314C64300B65091 /* GenreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB21A42314C64300B65091 /* GenreDataSource.swift */; };
 		14DB21A72314C7D200B65091 /* GenreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB21A62314C7D200B65091 /* GenreRepository.swift */; };
 		14DB21AA2314CA1300B65091 /* GenreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB21A92314CA1300B65091 /* GenreViewModel.swift */; };
+		14DB21AC2314E88900B65091 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB21AB2314E88900B65091 /* Genre.swift */; };
 		14E18A4E230E3AD700AA6241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E18A4D230E3AD700AA6241 /* AppDelegate.swift */; };
 		14E18A53230E3AD700AA6241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E18A51230E3AD700AA6241 /* Main.storyboard */; };
 		14E18A56230E3AD700AA6241 /* SoundGood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14E18A54230E3AD700AA6241 /* SoundGood.xcdatamodeld */; };
@@ -55,6 +56,7 @@
 		14DB21A42314C64300B65091 /* GenreDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreDataSource.swift; sourceTree = "<group>"; };
 		14DB21A62314C7D200B65091 /* GenreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreRepository.swift; sourceTree = "<group>"; };
 		14DB21A92314CA1300B65091 /* GenreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreViewModel.swift; sourceTree = "<group>"; };
+		14DB21AB2314E88900B65091 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		14E18A4A230E3AD700AA6241 /* SoundGood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundGood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E18A4D230E3AD700AA6241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14E18A52230E3AD700AA6241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			children = (
 				14E18A54230E3AD700AA6241 /* SoundGood.xcdatamodeld */,
 				14D227F3230E76510023D2C3 /* BaseModel.swift */,
+				14DB21AB2314E88900B65091 /* Genre.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				14E18A56230E3AD700AA6241 /* SoundGood.xcdatamodeld in Sources */,
 				14F768D32313B4ED007C9C8C /* GenreTableViewCell.swift in Sources */,
 				14D22801230E7D230023D2C3 /* ErrorResponse.swift in Sources */,
+				14DB21AC2314E88900B65091 /* Genre.swift in Sources */,
 				14D22804230E7E180023D2C3 /* BaseRequest.swift in Sources */,
 				147D1621230FD23100150D56 /* TrackTableViewCell.swift in Sources */,
 				14D227FA230E7A340023D2C3 /* TrackRepository.swift in Sources */,

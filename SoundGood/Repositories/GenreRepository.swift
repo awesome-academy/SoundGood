@@ -7,7 +7,7 @@
 //
 
 protocol GenreRepository {
-    func getGenreTitles(genres: [String: String]) -> [String]
+    func getGenres() -> [Genre]
 }
 
 class GenreDataRepository: GenreRepository {
@@ -17,7 +17,7 @@ class GenreDataRepository: GenreRepository {
         self.localDataSource = localDataSource
     }
 
-    func getGenreTitles(genres: [String: String]) -> [String] {
-        return localDataSource.getGenreTitles(genres: genres)
+    func getGenres() -> [Genre] {
+        return localDataSource.getGenres()
     }
 }

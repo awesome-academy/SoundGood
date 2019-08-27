@@ -13,7 +13,7 @@ class GenreViewModel {
         self.repository = repository
     }
 
-    func getGenreTitles(genres: [String: String]) -> [String] {
-        return repository.getGenreTitles(genres: genres)
+    func getGenres() -> [Genre] {
+        return repository.getGenres()
     }
 }
