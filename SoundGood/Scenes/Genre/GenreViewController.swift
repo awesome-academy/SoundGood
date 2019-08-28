@@ -12,6 +12,7 @@ class GenreViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet private weak var genreTableView: UITableView!
+    @IBOutlet weak var genreSearchBar: UISearchBar!
 
     // MARK: - Variables
     private let viewModel: GenreViewModel = {
@@ -20,9 +21,9 @@ class GenreViewController: UIViewController {
         let viewModel = GenreViewModel(repository: repository)
         return viewModel
     }()
-    private let searchController = UISearchController(searchResultsController: nil)
     private var genres = [Genre]()
     private var filteredGenres = [Genre]()
+    private var isSearching = false
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -37,10 +38,7 @@ class GenreViewController: UIViewController {
     }
 
     private func setupSearchBar() {
-        searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false
-        definesPresentationContext = true
-        genreTableView.tableHeaderView = searchController.searchBar
+        genreSearchBar.delegate = self
     }
 
     private func setupTableView() {
@@ -57,9 +55,9 @@ class GenreViewController: UIViewController {
         filteredGenres = genres
     }
 
-    private func navigateToTrackByGenre(with cell: GenreTableViewCell) {
+    private func navigateToTrackByGenre(with data: Genre) {
         guard let controller = Storyboards.trackByGenre.instantiateInitialViewController() as? TrackByGenreViewController else { return }
-        controller.genreTitle = cell.getGenreTitle()
+        controller.genreTitle = data.title
         guard let view = navigationController?.view else { return }
         UIView.transition(with: view, duration: 0.2, options: .transitionCrossDissolve, animations: nil, completion: nil)
         navigationController?.pushViewController(controller, animated: false)
@@ -69,12 +67,16 @@ class GenreViewController: UIViewController {
 // MARK: - TableView data source
 extension GenreViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredGenres.count
+        return isSearching ? filteredGenres.count : genres.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: GenreTableViewCell = genreTableView.dequeueReusableCell(for: indexPath)
-        cell.setup(title: filteredGenres[indexPath.row].title)
+        if isSearching {
+            cell.setup(title: filteredGenres[indexPath.row].title)
+        } else {
+            cell.setup(title: genres[indexPath.row].title)
+        }
         return cell
     }
 }
@@ -82,22 +84,25 @@ extension GenreViewController: UITableViewDataSource {
 // MARK: - TableView delegate
 extension GenreViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = genreTableView.cellForRow(at: indexPath) as? GenreTableViewCell else { return }
         tableView.deselectRow(at: indexPath, animated: true)
-        navigateToTrackByGenre(with: cell)
+        if isSearching {
+            navigateToTrackByGenre(with: filteredGenres[indexPath.row])
+        } else {
+            navigateToTrackByGenre(with: genres[indexPath.row])
+        }
     }
 }
 
 // MARK: - SearchBar delegate
-extension GenreViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        guard let searchText = searchController.searchBar.text else { return }
-        if searchText.isEmpty {
-            filteredGenres = genres
-        } else {
+extension GenreViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if !searchText.isEmpty {
             filteredGenres = genres.filter {
                 $0.title.lowercased().contains(searchText.lowercased())
             }
+            isSearching = true
+        } else {
+            isSearching = false
         }
         genreTableView.reloadData()
     }

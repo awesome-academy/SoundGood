@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TrackByGenreViewController: UIViewController {
+final class TrackByGenreViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet private weak var trackTableView: UITableView!
