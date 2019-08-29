@@ -87,13 +87,19 @@ extension GenreViewController: UITableViewDelegate {
 // MARK: - SearchBar delegate
 extension GenreViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if !searchText.isEmpty {
-            filteredGenres = genres.filter {
-                $0.title.lowercased().contains(searchText.lowercased())
+        filteredGenres = filterData(genres, with: searchText)
+        genreTableView.reloadData()
+    }
+
+    private func filterData(_ genres: [Genre], with keyword: String) -> [Genre] {
+        var filtered = [Genre]()
+        if !keyword.isEmpty {
+            filtered = genres.filter {
+                $0.title.lowercased().contains(keyword.lowercased())
             }
         } else {
-            filteredGenres = genres
+            filtered = genres
         }
-        genreTableView.reloadData()
+        return filtered
     }
 }
