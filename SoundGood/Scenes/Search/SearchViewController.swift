@@ -11,8 +11,8 @@ import UIKit
 class SearchViewController: UIViewController {
 
     // MARK: - Outlets
-    @IBOutlet weak var trackSearchBar: UISearchBar!
-    @IBOutlet weak var trackResultTableView: UITableView!
+    @IBOutlet private weak var trackSearchBar: UISearchBar!
+    @IBOutlet private weak var trackResultTableView: UITableView!
 
     // MARK: - Variables
     private var searchedTracks = [String]()
@@ -68,7 +68,6 @@ extension SearchViewController: UISearchBarDelegate {
         guard let query = searchBar.text, !query.isEmpty else {
             return
         }
-        print(query)
         trackResultTableView.reloadData()
     }
 }
