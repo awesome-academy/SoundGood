@@ -12,7 +12,7 @@ class GenreViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet private weak var genreTableView: UITableView!
-    @IBOutlet weak var genreSearchBar: UISearchBar!
+    @IBOutlet private weak var genreSearchBar: UISearchBar!
 
     // MARK: - Variables
     private let viewModel: GenreViewModel = {
@@ -23,7 +23,6 @@ class GenreViewController: UIViewController {
     }()
     private var genres = [Genre]()
     private var filteredGenres = [Genre]()
-    private var isSearching = false
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -67,16 +66,12 @@ class GenreViewController: UIViewController {
 // MARK: - TableView data source
 extension GenreViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return isSearching ? filteredGenres.count : genres.count
+        return filteredGenres.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: GenreTableViewCell = genreTableView.dequeueReusableCell(for: indexPath)
-        if isSearching {
-            cell.setup(title: filteredGenres[indexPath.row].title)
-        } else {
-            cell.setup(title: genres[indexPath.row].title)
-        }
+        cell.setup(title: filteredGenres[indexPath.row].title)
         return cell
     }
 }
@@ -85,11 +80,7 @@ extension GenreViewController: UITableViewDataSource {
 extension GenreViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if isSearching {
-            navigateToTrackByGenre(with: filteredGenres[indexPath.row])
-        } else {
-            navigateToTrackByGenre(with: genres[indexPath.row])
-        }
+        navigateToTrackByGenre(with: filteredGenres[indexPath.row])
     }
 }
 
@@ -100,9 +91,8 @@ extension GenreViewController: UISearchBarDelegate {
             filteredGenres = genres.filter {
                 $0.title.lowercased().contains(searchText.lowercased())
             }
-            isSearching = true
         } else {
-            isSearching = false
+            filteredGenres = genres
         }
         genreTableView.reloadData()
     }
