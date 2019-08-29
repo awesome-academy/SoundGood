@@ -92,14 +92,11 @@ extension GenreViewController: UISearchBarDelegate {
     }
 
     private func filterData(_ genres: [Genre], with keyword: String) -> [Genre] {
-        var filtered = [Genre]()
-        if !keyword.isEmpty {
-            filtered = genres.filter {
-                $0.title.lowercased().contains(keyword.lowercased())
-            }
-        } else {
-            filtered = genres
+        if keyword.isEmpty {
+            return genres
         }
-        return filtered
+        return genres.filter {
+            $0.title.lowercased().contains(keyword.lowercased())
+        }
     }
 }
