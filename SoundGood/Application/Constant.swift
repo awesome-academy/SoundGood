@@ -25,4 +25,5 @@ enum Constant {
                          Genre(key: "indie", title: "Indie"),
                          Genre(key: "jazzblues", title: "Jazz & Blues"),
                          Genre(key: "latin", title: "Latin")]
+    static let searchDelay = 1.0
 }

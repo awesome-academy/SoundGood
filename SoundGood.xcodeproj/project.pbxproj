@@ -17,6 +17,7 @@
 		149CC4BF231626C400932199 /* TrackByGenre.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 149CC4BE231626C400932199 /* TrackByGenre.storyboard */; };
 		149CC4C12316279500932199 /* TrackByGenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CC4C02316279500932199 /* TrackByGenreViewController.swift */; };
 		149CC4C3231628EC00932199 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CC4C2231628EC00932199 /* Storyboards.swift */; };
+		149CC4C6231679B100932199 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CC4C5231679B100932199 /* SearchViewController.swift */; };
 		14C05283230F8D1100B74529 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C05282230F8D1100B74529 /* Home.storyboard */; };
 		14D227F4230E76510023D2C3 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D227F3230E76510023D2C3 /* BaseModel.swift */; };
 		14D227F6230E785F0023D2C3 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D227F5230E785F0023D2C3 /* LocalDataSource.swift */; };
@@ -51,6 +52,7 @@
 		149CC4BE231626C400932199 /* TrackByGenre.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrackByGenre.storyboard; sourceTree = "<group>"; };
 		149CC4C02316279500932199 /* TrackByGenreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackByGenreViewController.swift; sourceTree = "<group>"; };
 		149CC4C2231628EC00932199 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		149CC4C5231679B100932199 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		14C05282230F8D1100B74529 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		14D227F3230E76510023D2C3 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		14D227F5230E785F0023D2C3 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
@@ -116,6 +118,14 @@
 				149CC4C02316279500932199 /* TrackByGenreViewController.swift */,
 			);
 			path = TrackByGenre;
+			sourceTree = "<group>";
+		};
+		149CC4C42316799700932199 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				149CC4C5231679B100932199 /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		14C05281230F765D00B74529 /* Storyboards */ = {
@@ -308,6 +318,7 @@
 		14E18A6D230E3C4800AA6241 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				149CC4C42316799700932199 /* Search */,
 				149CC4BD2316269600932199 /* TrackByGenre */,
 				14683A4F23139A90007C0AFC /* Genre */,
 				147D161E230FD21900150D56 /* Home */,
@@ -510,6 +521,7 @@
 				14D227FA230E7A340023D2C3 /* TrackRepository.swift in Sources */,
 				149CC4C12316279500932199 /* TrackByGenreViewController.swift in Sources */,
 				14E18A7A230E669700AA6241 /* Constant.swift in Sources */,
+				149CC4C6231679B100932199 /* SearchViewController.swift in Sources */,
 				14D227FF230E7C270023D2C3 /* BaseError.swift in Sources */,
 				149CC4C3231628EC00932199 /* Storyboards.swift in Sources */,
 				147D1624230FD2CF00150D56 /* HomeViewController.swift in Sources */,

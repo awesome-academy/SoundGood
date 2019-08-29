@@ -13,27 +13,38 @@
         <!--Search-->
         <scene sceneID="ous-kz-IGd">
             <objects>
-                <viewController storyboardIdentifier="Search" title="Search" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LSS-r2-gzJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Search" title="Search" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LSS-r2-gzJ" customClass="SearchViewController" customModule="SoundGood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ehg-No-g27">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHi-fl-cQs">
-                                <rect key="frame" x="186" y="418" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <searchBar contentMode="redraw" placeholder="Search tracks..." translatesAutoresizingMaskIntoConstraints="NO" id="07N-h4-Cka">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hOB-bl-uwX">
+                                <rect key="frame" x="0.0" y="100" width="414" height="713"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZHi-fl-cQs" firstAttribute="centerX" secondItem="XkR-22-moX" secondAttribute="centerX" id="3Wt-Oe-uAZ"/>
-                            <constraint firstItem="ZHi-fl-cQs" firstAttribute="centerY" secondItem="XkR-22-moX" secondAttribute="centerY" id="q6X-Ng-05r"/>
+                            <constraint firstItem="hOB-bl-uwX" firstAttribute="leading" secondItem="XkR-22-moX" secondAttribute="leading" id="9Sq-O2-cT1"/>
+                            <constraint firstItem="XkR-22-moX" firstAttribute="trailing" secondItem="hOB-bl-uwX" secondAttribute="trailing" id="JRH-IU-0TR"/>
+                            <constraint firstItem="XkR-22-moX" firstAttribute="bottom" secondItem="hOB-bl-uwX" secondAttribute="bottom" id="RM2-3f-PA7"/>
+                            <constraint firstItem="07N-h4-Cka" firstAttribute="leading" secondItem="Ehg-No-g27" secondAttribute="leading" id="aGU-h6-otk"/>
+                            <constraint firstItem="hOB-bl-uwX" firstAttribute="top" secondItem="07N-h4-Cka" secondAttribute="bottom" id="kTh-aK-k9H"/>
+                            <constraint firstItem="XkR-22-moX" firstAttribute="trailing" secondItem="07N-h4-Cka" secondAttribute="trailing" id="mUw-5i-JYL"/>
+                            <constraint firstItem="07N-h4-Cka" firstAttribute="top" secondItem="XkR-22-moX" secondAttribute="top" id="zDD-ql-rA2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XkR-22-moX"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" id="pxY-A0-jz8"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="trackResultTableView" destination="hOB-bl-uwX" id="KRy-ba-NnV"/>
+                        <outlet property="trackSearchBar" destination="07N-h4-Cka" id="4sT-g1-DXg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJ1-Mw-r73" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
