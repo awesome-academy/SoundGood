@@ -20,4 +20,8 @@ final class GenreTableViewCell: UITableViewCell, NibReusable {
     func setup(title: String) {
         genreTitleLabel.text = title
     }
+
+    func getGenreTitle() -> String {
+        return genreTitleLabel.text ?? ""
+    }
 }
