@@ -48,16 +48,25 @@ class FavoriteViewController: UIViewController {
         historyTableView.isHidden = listenedTracks.isEmpty
     }
 
-    private func navigateToFavorites() {
+    private func navigate(controller: UIViewController) {
+        guard let view = navigationController?.view else { return }
+        UIView.transition(with: view, duration: 0.2, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        navigationController?.pushViewController(controller, animated: false)
+    }
 
+    private func navigateToFavorites() {
+        guard let controller = Storyboards.favoriteTracks.instantiateInitialViewController() as? FavoriteTracksViewController else { return }
+        navigate(controller: controller)
     }
 
     private func navigateToPlaylists() {
-
+        guard let controller = Storyboards.playlist.instantiateInitialViewController() as? PlaylistViewController else { return }
+        navigate(controller: controller)
     }
 
     private func navigateToHistory() {
-
+        guard let controller = Storyboards.history.instantiateInitialViewController() as? HistoryViewController else { return }
+        navigate(controller: controller)
     }
 
     @IBAction func navigateToFavorites(_ sender: Any) {
