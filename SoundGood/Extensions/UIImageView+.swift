@@ -30,7 +30,6 @@ extension UIImageView {
     fileprivate func addTapGesture() {
         if self.isUserInteractionEnabled {
             self.gesture.numberOfTapsRequired = 1
-            self.isUserInteractionEnabled = true
             self.addGestureRecognizer(gesture)
         }
     }

@@ -30,14 +30,14 @@ class FavoriteViewController: UIViewController {
     }
 
     private func setupImageViews() {
-        favoriteImage.tapAction = {
-            self.navigateToFavorites(self)
+        favoriteImage.tapAction = { [weak self] in
+            self?.navigateToFavorites()
         }
-        playlistImage.tapAction = {
-            self.navigateToPlaylists(self)
+        playlistImage.tapAction = { [weak self] in
+            self?.navigateToPlaylists()
         }
-        historyImage.tapAction = {
-            self.navigateToHistory(self)
+        historyImage.tapAction = { [weak self] in
+            self?.navigateToHistory()
         }
     }
 
@@ -47,14 +47,29 @@ class FavoriteViewController: UIViewController {
         historyTableView.delegate = self
         historyTableView.isHidden = listenedTracks.isEmpty
     }
-    
+
+    private func navigateToFavorites() {
+
+    }
+
+    private func navigateToPlaylists() {
+
+    }
+
+    private func navigateToHistory() {
+
+    }
+
     @IBAction func navigateToFavorites(_ sender: Any) {
+        navigateToFavorites()
     }
-    
+
     @IBAction func navigateToPlaylists(_ sender: Any) {
+        navigateToPlaylists()
     }
-    
+
     @IBAction func navigateToHistory(_ sender: Any) {
+        navigateToHistory()
     }
 
 }
