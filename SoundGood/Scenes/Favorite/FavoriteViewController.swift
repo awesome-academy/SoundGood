@@ -11,22 +11,10 @@ import UIKit
 class FavoriteViewController: UIViewController {
 
     // MARK: - Outlets
-    @IBOutlet private weak var favoriteImage: UIImageView! {
-        didSet {
-            self.favoriteImage.tappable = true
-        }
-    }
-    @IBOutlet private weak var playlistImage: UIImageView! {
-        didSet {
-            self.playlistImage.tappable = true
-        }
-    }
-    @IBOutlet private weak var historyImage: UIImageView! {
-        didSet {
-            self.historyImage.tappable = true
-        }
-    }
-    @IBOutlet weak var historyTableView: UITableView!
+    @IBOutlet private weak var favoriteImage: UIImageView!
+    @IBOutlet private weak var playlistImage: UIImageView!
+    @IBOutlet private weak var historyImage: UIImageView!
+    @IBOutlet private weak var historyTableView: UITableView!
 
     // MARK: - Variables
     private var listenedTracks = [String]()
@@ -39,15 +27,6 @@ class FavoriteViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.topItem?.title = "Favorite"
-    }
-
-    @IBAction func navigateToFavorites(_ sender: Any) {
-    }
-
-    @IBAction func navigateToPlaylists(_ sender: Any) {
-    }
-
-    @IBAction func navigateToHistory(_ sender: Any) {
     }
 
     private func setupImageViews() {
@@ -68,6 +47,16 @@ class FavoriteViewController: UIViewController {
         historyTableView.delegate = self
         historyTableView.isHidden = listenedTracks.isEmpty
     }
+    
+    @IBAction func navigateToFavorites(_ sender: Any) {
+    }
+    
+    @IBAction func navigateToPlaylists(_ sender: Any) {
+    }
+    
+    @IBAction func navigateToHistory(_ sender: Any) {
+    }
+
 }
 
 // MARK: - TableView datasource

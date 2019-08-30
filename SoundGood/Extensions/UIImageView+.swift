@@ -9,7 +9,6 @@
 import UIKit
 
 typealias SimpleClosure = (() -> Void)
-private var tappableKey = 0
 private var actionKey = 1
 
 extension UIImageView {
@@ -20,6 +19,7 @@ extension UIImageView {
         }
         set {
             objc_setAssociatedObject(self, &actionKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            self.addTapGesture()
         }
     }
 
@@ -27,18 +27,8 @@ extension UIImageView {
         return UITapGestureRecognizer(target: self, action: #selector(tapped))
     }
 
-    var tappable: Bool! {
-        get {
-            return objc_getAssociatedObject(self, &tappableKey) as? Bool
-        }
-        set(newValue) {
-            objc_setAssociatedObject(self, &tappableKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
-            self.addTapGesture()
-        }
-    }
-
     fileprivate func addTapGesture() {
-        if self.tappable {
+        if self.isUserInteractionEnabled {
             self.gesture.numberOfTapsRequired = 1
             self.isUserInteractionEnabled = true
             self.addGestureRecognizer(gesture)
