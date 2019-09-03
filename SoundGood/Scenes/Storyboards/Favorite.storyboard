@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorite-->
+        <scene sceneID="pRS-kn-RHF">
+            <objects>
+                <viewController storyboardIdentifier="Favorite" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YX0-ra-WlE" customClass="FavoriteViewController" customModule="SoundGood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4P9-5S-e4p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJ6-Dd-Pva">
+                                <rect key="frame" x="0.0" y="74" width="414" height="66"/>
+                                <string key="text">Your favorites, playlists.
+All in one place.</string>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eW-9t-Pos">
+                                <rect key="frame" x="10" y="231" width="364" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Playlists">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="navigateToPlaylists:" destination="YX0-ra-WlE" eventType="touchUpInside" id="8Ue-ZY-zO9"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ehp-u9-Ues">
+                                <rect key="frame" x="0.0" y="341" width="414" height="316"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMB-qh-Dhw">
+                                <rect key="frame" x="0.0" y="677" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="SEE ALL LISTENING HISTORY">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="navigateToHistory:" destination="YX0-ra-WlE" eventType="touchUpInside" id="dm7-wE-np1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listen history" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAD-XV-Gsh">
+                                <rect key="frame" x="0.0" y="297" width="414" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uX-ea-YpD">
+                                <rect key="frame" x="10" y="190" width="364" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Favorite tracks">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="navigateToFavorites:" destination="YX0-ra-WlE" eventType="touchUpInside" id="XxR-X5-4Yq"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-right" highlightedImage="chevron-right-highlighted" translatesAutoresizingMaskIntoConstraints="NO" id="tE3-5J-55g">
+                                <rect key="frame" x="378" y="190" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="9oE-zx-B28"/>
+                                    <constraint firstAttribute="width" secondItem="tE3-5J-55g" secondAttribute="height" multiplier="1:1" id="j7r-rd-hDJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-right" highlightedImage="chevron-right-highlighted" translatesAutoresizingMaskIntoConstraints="NO" id="1GR-t7-fsa">
+                                <rect key="frame" x="378" y="231" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1GR-t7-fsa" secondAttribute="height" multiplier="1:1" id="mYx-PW-Fh8"/>
+                                    <constraint firstAttribute="height" constant="36" id="s5y-qx-gn9"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-right" highlightedImage="chevron-right-highlighted" translatesAutoresizingMaskIntoConstraints="NO" id="8uL-jR-vvK">
+                                <rect key="frame" x="378" y="677" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="mbo-4W-cuV"/>
+                                    <constraint firstAttribute="width" secondItem="8uL-jR-vvK" secondAttribute="height" multiplier="1:1" id="zTS-9L-5zk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tE3-5J-55g" firstAttribute="trailing" secondItem="GHv-LC-psn" secondAttribute="trailing" id="1BC-wG-iwX"/>
+                            <constraint firstItem="8uL-jR-vvK" firstAttribute="trailing" secondItem="GHv-LC-psn" secondAttribute="trailing" id="4dJ-Do-lcf"/>
+                            <constraint firstItem="GHv-LC-psn" firstAttribute="trailing" secondItem="NMB-qh-Dhw" secondAttribute="trailing" constant="40" id="Ajy-HY-rGb"/>
+                            <constraint firstItem="9uX-ea-YpD" firstAttribute="leading" secondItem="GHv-LC-psn" secondAttribute="leading" constant="10" id="C4S-nl-zcC"/>
+                            <constraint firstItem="2eW-9t-Pos" firstAttribute="top" secondItem="9uX-ea-YpD" secondAttribute="bottom" constant="5" id="E96-Dc-TrP"/>
+                            <constraint firstItem="mAD-XV-Gsh" firstAttribute="top" secondItem="2eW-9t-Pos" secondAttribute="bottom" constant="30" id="EaX-Rd-RMR"/>
+                            <constraint firstItem="BJ6-Dd-Pva" firstAttribute="top" secondItem="GHv-LC-psn" secondAttribute="top" constant="30" id="FWF-wy-RXi"/>
+                            <constraint firstItem="8uL-jR-vvK" firstAttribute="centerY" secondItem="NMB-qh-Dhw" secondAttribute="centerY" id="FqE-4t-V07"/>
+                            <constraint firstItem="GHv-LC-psn" firstAttribute="trailing" secondItem="mAD-XV-Gsh" secondAttribute="trailing" id="JOI-6s-69b"/>
+                            <constraint firstItem="GHv-LC-psn" firstAttribute="trailing" secondItem="Ehp-u9-Ues" secondAttribute="trailing" id="JTw-Z2-nYB"/>
+                            <constraint firstItem="tE3-5J-55g" firstAttribute="centerY" secondItem="9uX-ea-YpD" secondAttribute="centerY" id="Mlz-om-tuF"/>
+                            <constraint firstItem="mAD-XV-Gsh" firstAttribute="leading" secondItem="GHv-LC-psn" secondAttribute="leading" id="NZI-8F-RkF"/>
+                            <constraint firstItem="NMB-qh-Dhw" firstAttribute="leading" secondItem="GHv-LC-psn" secondAttribute="leading" id="QSD-L3-Kz3"/>
+                            <constraint firstItem="1GR-t7-fsa" firstAttribute="centerY" secondItem="2eW-9t-Pos" secondAttribute="centerY" id="Qeb-Dc-fA3"/>
+                            <constraint firstItem="2eW-9t-Pos" firstAttribute="leading" secondItem="GHv-LC-psn" secondAttribute="leading" constant="10" id="SQe-PU-yzv"/>
+                            <constraint firstItem="GHv-LC-psn" firstAttribute="trailing" secondItem="BJ6-Dd-Pva" secondAttribute="trailing" id="V0Q-0m-IF3"/>
+                            <constraint firstItem="Ehp-u9-Ues" firstAttribute="top" secondItem="mAD-XV-Gsh" secondAttribute="bottom" constant="20" id="XdW-DA-lUi"/>
+                            <constraint firstItem="GHv-LC-psn" firstAttribute="trailing" secondItem="2eW-9t-Pos" secondAttribute="trailing" constant="40" id="ZAI-6u-dhE"/>
+                            <constraint firstItem="BJ6-Dd-Pva" firstAttribute="leading" secondItem="GHv-LC-psn" secondAttribute="leading" id="ZaX-l7-Omx"/>
+                            <constraint firstItem="1GR-t7-fsa" firstAttribute="trailing" secondItem="GHv-LC-psn" secondAttribute="trailing" id="ZiN-E3-cKO"/>
+                            <constraint firstItem="GHv-LC-psn" firstAttribute="trailing" secondItem="9uX-ea-YpD" secondAttribute="trailing" constant="40" id="cPS-wT-cIm"/>
+                            <constraint firstItem="NMB-qh-Dhw" firstAttribute="top" secondItem="Ehp-u9-Ues" secondAttribute="bottom" constant="20" id="end-jf-VUJ"/>
+                            <constraint firstItem="GHv-LC-psn" firstAttribute="bottom" secondItem="NMB-qh-Dhw" secondAttribute="bottom" constant="100" id="qZU-GL-YLj"/>
+                            <constraint firstItem="9uX-ea-YpD" firstAttribute="top" secondItem="BJ6-Dd-Pva" secondAttribute="bottom" constant="50" id="rPg-KX-koD"/>
+                            <constraint firstItem="Ehp-u9-Ues" firstAttribute="leading" secondItem="GHv-LC-psn" secondAttribute="leading" id="wvW-qV-PI1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GHv-LC-psn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favorite" id="wCq-Id-05z"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="favoriteImage" destination="tE3-5J-55g" id="iJz-re-9A7"/>
+                        <outlet property="historyImage" destination="8uL-jR-vvK" id="iMk-u3-gxX"/>
+                        <outlet property="historyTableView" destination="Ehp-u9-Ues" id="6Hi-yZ-CKS"/>
+                        <outlet property="playlistImage" destination="1GR-t7-fsa" id="EWX-9a-slA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hLH-Ce-Pdu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="18.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron-right" width="12" height="12"/>
+        <image name="chevron-right-highlighted" width="12" height="12"/>
+    </resources>
+</document>

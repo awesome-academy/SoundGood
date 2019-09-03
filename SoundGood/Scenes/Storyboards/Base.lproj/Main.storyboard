@@ -82,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="315" y="88"/>
         </scene>
-        <!--Setting-->
+        <!--Favorite-->
         <scene sceneID="QSw-sD-GOQ">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Setting" storyboardName="Setting" referencedIdentifier="Setting" id="Nof-ZB-wbt" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Favorite" storyboardName="Favorite" referencedIdentifier="Favorite" id="Nof-ZB-wbt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ecB-6f-VQp"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mV-VF-tqO" userLabel="First Responder" sceneMemberID="firstResponder"/>
