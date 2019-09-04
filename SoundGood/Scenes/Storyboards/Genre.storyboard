@@ -13,7 +13,7 @@
         <!--Genre-->
         <scene sceneID="k4W-jK-DQx">
             <objects>
-                <viewController storyboardIdentifier="Genre" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BKH-7s-pfw" customClass="GenreViewController" customModule="SoundGood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GenreViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BKH-7s-pfw" customClass="GenreViewController" customModule="SoundGood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5zc-Xh-Lt3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
