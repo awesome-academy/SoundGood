@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Reusable
 
 class HistoryViewController: UIViewController {
 
@@ -24,6 +25,7 @@ class HistoryViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController?.navigationBar.topItem?.title = "History"
     }
 
@@ -53,9 +55,7 @@ extension HistoryViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as TrackTableViewCell
-        cell.setup(imageUrl: historyTracks[indexPath.row].name ?? "",
-                   title: historyTracks[indexPath.row].name ?? "",
-                   artist: historyTracks[indexPath.row].name ?? "")
+        cell.setup(track: historyTracks[indexPath.row])
         return cell
     }
 }
@@ -65,4 +65,9 @@ extension HistoryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+}
+
+// MARK: StoryboardSceneBased
+extension HistoryViewController: StoryboardSceneBased {
+    static var sceneStoryboard = Storyboards.history
 }

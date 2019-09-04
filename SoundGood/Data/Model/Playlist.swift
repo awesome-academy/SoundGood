@@ -10,8 +10,8 @@ import ObjectMapper
 
 struct Playlist: BaseModel {
 
-    var name: String?
-    var tracks: [Track]?
+    var name: String = ""
+    var tracks: [Track] = []
 
     init(name: String, tracks: [Track]) {
         self.name = name

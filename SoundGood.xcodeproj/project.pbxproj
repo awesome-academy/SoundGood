@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		140853F0231907E900C98D0E /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140853EF231907E900C98D0E /* UIImageView+.swift */; };
 		14683A5123139AD4007C0AFC /* GenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14683A5023139AD4007C0AFC /* GenreViewController.swift */; };
+		146CCA7E231F485C00BF0762 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146CCA7D231F485C00BF0762 /* ImageButton.swift */; };
 		147D1614230FBBB500150D56 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147D1613230FBBB500150D56 /* Search.storyboard */; };
 		147D1616230FBDB400150D56 /* Genre.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147D1615230FBDB400150D56 /* Genre.storyboard */; };
 		147D1618230FBFB700150D56 /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147D1617230FBFB700150D56 /* Favorite.storyboard */; };
@@ -52,8 +52,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		140853EF231907E900C98D0E /* UIImageView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		14683A5023139AD4007C0AFC /* GenreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreViewController.swift; sourceTree = "<group>"; };
+		146CCA7D231F485C00BF0762 /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
 		147D1613230FBBB500150D56 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		147D1615230FBDB400150D56 /* Genre.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Genre.storyboard; sourceTree = "<group>"; };
 		147D1617230FBFB700150D56 /* Favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
@@ -327,7 +327,6 @@
 		14E18A6B230E3C3A00AA6241 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				140853EF231907E900C98D0E /* UIImageView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -391,6 +390,7 @@
 		14F100C4231775CF00537827 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				146CCA7D231F485C00BF0762 /* ImageButton.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -577,10 +577,10 @@
 				14B716E7231E034100378625 /* HistoryViewController.swift in Sources */,
 				149CC4C6231679B100932199 /* SearchViewController.swift in Sources */,
 				14D227FF230E7C270023D2C3 /* BaseError.swift in Sources */,
-				140853F0231907E900C98D0E /* UIImageView+.swift in Sources */,
 				149CC4C3231628EC00932199 /* Storyboards.swift in Sources */,
 				14BBC15723193FFF00A16C12 /* PlaylistViewController.swift in Sources */,
 				147D1624230FD2CF00150D56 /* HomeViewController.swift in Sources */,
+				146CCA7E231F485C00BF0762 /* ImageButton.swift in Sources */,
 				14D227F4230E76510023D2C3 /* BaseModel.swift in Sources */,
 				14DB21AA2314CA1300B65091 /* GenreViewModel.swift in Sources */,
 			);

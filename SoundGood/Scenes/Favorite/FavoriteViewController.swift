@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import Reusable
 
 class FavoriteViewController: UIViewController {
 
     // MARK: - Outlets
-    @IBOutlet private weak var favoriteImage: UIImageView!
-    @IBOutlet private weak var playlistImage: UIImageView!
-    @IBOutlet private weak var historyImage: UIImageView!
+    @IBOutlet private weak var favoriteImageView: UIImageView!
+    @IBOutlet private weak var playlistImageView: UIImageView!
+    @IBOutlet private weak var historyImageView: UIImageView!
     @IBOutlet private weak var historyTableView: UITableView!
 
     // MARK: - Variables
@@ -26,19 +27,17 @@ class FavoriteViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController?.navigationBar.topItem?.title = "Favorite"
     }
 
     private func setupImageViews() {
-        favoriteImage.tapAction = { [weak self] in
-            self?.navigateToFavorites()
-        }
-        playlistImage.tapAction = { [weak self] in
-            self?.navigateToPlaylists()
-        }
-        historyImage.tapAction = { [weak self] in
-            self?.navigateToHistory()
-        }
+        let favoriteTapGesture = UITapGestureRecognizer(target: self, action: #selector(navigateToFavorites(_:)))
+        let playlistTapGesture = UITapGestureRecognizer(target: self, action: #selector(navigateToPlaylists(_:)))
+        let historyTapGesture = UITapGestureRecognizer(target: self, action: #selector(navigateToHistory(_:)))
+        favoriteImageView.addGestureRecognizer(favoriteTapGesture)
+        playlistImageView.addGestureRecognizer(playlistTapGesture)
+        historyImageView.addGestureRecognizer(historyTapGesture)
     }
 
     private func setupTableView() {
@@ -49,38 +48,34 @@ class FavoriteViewController: UIViewController {
     }
 
     private func navigate(controller: UIViewController) {
+        let transition = CATransition()
+        transition.duration = 0.4
+        transition.type = .push
+        transition.subtype = .fromRight
+        transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
         guard let view = navigationController?.view else { return }
-        UIView.transition(with: view, duration: 0.2, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        view.window?.layer.add(transition, forKey: kCATransition)
         navigationController?.pushViewController(controller, animated: false)
     }
 
-    private func navigateToFavorites() {
-        guard let controller = Storyboards.favoriteTracks.instantiateInitialViewController() as? FavoriteTracksViewController else { return }
-        navigate(controller: controller)
-    }
-
-    private func navigateToPlaylists() {
-        guard let controller = Storyboards.playlist.instantiateInitialViewController() as? PlaylistViewController else { return }
-        navigate(controller: controller)
-    }
-
-    private func navigateToHistory() {
-        guard let controller = Storyboards.history.instantiateInitialViewController() as? HistoryViewController else { return }
-        navigate(controller: controller)
-    }
-
     @IBAction func navigateToFavorites(_ sender: Any) {
-        navigateToFavorites()
+        let controller = FavoriteTracksViewController.instantiate()
+        favoriteImageView.isHighlighted = false
+        navigate(controller: controller)
     }
 
     @IBAction func navigateToPlaylists(_ sender: Any) {
-        navigateToPlaylists()
+        let controller = PlaylistViewController.instantiate()
+        playlistImageView.isHighlighted = false
+        navigate(controller: controller)
     }
 
     @IBAction func navigateToHistory(_ sender: Any) {
-        navigateToHistory()
-    }
+        let controller = HistoryViewController.instantiate()
+        historyImageView.isHighlighted = false
+        navigate(controller: controller)
 
+    }
 }
 
 // MARK: - TableView datasource
@@ -99,4 +94,9 @@ extension FavoriteViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+}
+
+// MARK: - StoryboardScenceBased
+extension FavoriteViewController: StoryboardSceneBased {
+    static var sceneStoryboard = Storyboards.favorite
 }

@@ -20,8 +20,7 @@ final class TrackTableViewCell: UITableViewCell, NibReusable {
         // Initialization code
     }
 
-    func setup(imageUrl: String, title: String, artist: String) {
-        trackTitle.text = title
-        trackArtist.text = artist
+    func setup(track: Track) {
+        trackTitle.text = track.name
     }
 }

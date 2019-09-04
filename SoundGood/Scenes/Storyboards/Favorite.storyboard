@@ -122,10 +122,10 @@ All in one place.</string>
                     <tabBarItem key="tabBarItem" title="Favorite" id="wCq-Id-05z"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="favoriteImage" destination="tE3-5J-55g" id="iJz-re-9A7"/>
-                        <outlet property="historyImage" destination="8uL-jR-vvK" id="iMk-u3-gxX"/>
+                        <outlet property="favoriteImageView" destination="tE3-5J-55g" id="iJz-re-9A7"/>
+                        <outlet property="historyImageView" destination="8uL-jR-vvK" id="iMk-u3-gxX"/>
                         <outlet property="historyTableView" destination="Ehp-u9-Ues" id="6Hi-yZ-CKS"/>
-                        <outlet property="playlistImage" destination="1GR-t7-fsa" id="EWX-9a-slA"/>
+                        <outlet property="playlistImageView" destination="1GR-t7-fsa" id="EWX-9a-slA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLH-Ce-Pdu" userLabel="First Responder" sceneMemberID="firstResponder"/>

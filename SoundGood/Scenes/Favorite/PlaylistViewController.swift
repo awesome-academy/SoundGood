@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Reusable
 
-class PlaylistViewController: UIViewController {
+final class PlaylistViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var playlistTableView: UITableView!
@@ -20,6 +21,11 @@ class PlaylistViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         playlists = getPlaylists()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.topItem?.title = "Playlist"
     }
 
     private func setupTableView() {
@@ -33,8 +39,8 @@ class PlaylistViewController: UIViewController {
         list.append(Playlist(name: "First", tracks: [Track(name: "Love the way you lie"),
                                                      Track(name: "Another thing")]))
         list.append(Playlist(name: "Second", tracks: [Track(name: "Love the way you lie"),
-                                                     Track(name: "Another thing"),
-                                                     Track(name: "Initialize")])
+                                                      Track(name: "Another thing"),
+                                                      Track(name: "Initialize")])
         )
         return list
     }
@@ -48,7 +54,7 @@ extension PlaylistViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return playlists[section].tracks?.count ?? 0
+        return playlists[section].tracks.count
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -57,9 +63,7 @@ extension PlaylistViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as TrackTableViewCell
-        cell.setup(imageUrl: playlists[indexPath.section].tracks?[indexPath.row].name ?? "",
-                   title: playlists[indexPath.section].tracks?[indexPath.row].name ?? "",
-                   artist: playlists[indexPath.section].tracks?[indexPath.row].name ?? "")
+        cell.setup(track: playlists[indexPath.section].tracks[indexPath.row])
         return cell
     }
 }
@@ -69,4 +73,9 @@ extension PlaylistViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+}
+
+// MARK: - StoryboardSceneBased
+extension PlaylistViewController: StoryboardSceneBased {
+    static var sceneStoryboard = Storyboards.playlist
 }
