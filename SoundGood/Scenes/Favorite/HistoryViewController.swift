@@ -19,9 +19,6 @@ class HistoryViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         setClearButton()
-        historyTracks += [Track(name: "Love the way you lie"),
-                          Track(name: "Another thing"),
-                          Track(name: "Initialize")]
     }
 
     override func viewWillAppear(_ animated: Bool) {

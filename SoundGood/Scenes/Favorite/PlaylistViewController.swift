@@ -20,7 +20,6 @@ final class PlaylistViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        playlists = getPlaylists()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,17 +31,6 @@ final class PlaylistViewController: UIViewController {
         playlistTableView.dataSource = self
         playlistTableView.delegate = self
         playlistTableView.register(cellType: TrackTableViewCell.self)
-    }
-
-    private func getPlaylists() -> [Playlist] {
-        var list = [Playlist]()
-        list.append(Playlist(name: "First", tracks: [Track(name: "Love the way you lie"),
-                                                     Track(name: "Another thing")]))
-        list.append(Playlist(name: "Second", tracks: [Track(name: "Love the way you lie"),
-                                                      Track(name: "Another thing"),
-                                                      Track(name: "Initialize")])
-        )
-        return list
     }
 }
 
