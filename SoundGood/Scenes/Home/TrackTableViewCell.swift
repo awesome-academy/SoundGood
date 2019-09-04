@@ -21,6 +21,24 @@ final class TrackTableViewCell: UITableViewCell, NibReusable {
     }
 
     func setup(track: Track) {
-        trackTitle.text = track.name
+        trackTitle.text = track.title
+        trackArtist.text = track.artist
+        if let artwork = track.artWorkUrl, let url = URL(string: artwork) {
+            loadImageFromUrl(url: url)
+        }
+    }
+
+    private func loadImageFromUrl(url: URL) {
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async {
+                self.trackImage.image = image
+            }
+        }.resume()
     }
 }

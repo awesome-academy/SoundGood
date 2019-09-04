@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-struct BaseRequest {
+class BaseRequest {
     var url = ""
     var requestType = Alamofire.HTTPMethod.get
     var body: [String: Any]?
@@ -22,4 +22,15 @@ struct BaseRequest {
         }
     }
 
+    init(url: String, requestType: Alamofire.HTTPMethod) {
+        self.url = url
+        self.requestType = requestType
+    }
+
+    init(url: String, requestType: Alamofire.HTTPMethod, body: [String: Any]) {
+        self.url = url
+        self.requestType = requestType
+        self.body = body
+        self.body?["client_id"] = ApiConstant.apiKey
+    }
 }

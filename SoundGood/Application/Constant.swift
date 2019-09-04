@@ -7,7 +7,6 @@
 //
 
 enum Constant {
-    static let apiKey = "7c8ae3eed403b61716254856c4155475"
     static let genres = [Genre(key: "alternativerock", title: "Alternative Rock"),
                          Genre(key: "ambient", title: "Ambient"),
                          Genre(key: "classical", title: "Classical"),
@@ -27,4 +26,9 @@ enum Constant {
                          Genre(key: "latin", title: "Latin")]
     static let searchDelay = 1.0
     static let numberOfHistoryTrackDisplay = 3
+    static let requestLimit = 20
+}
+
+enum TableViewConstant {
+    static let heightForTableViewCell = 100
 }
