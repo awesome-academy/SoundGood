@@ -31,20 +31,20 @@
             </objects>
             <point key="canvasLocation" x="-1094" y="62"/>
         </scene>
-        <!--Home-->
+        <!--HomeViewController-->
         <scene sceneID="ffI-sw-9Uw">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Home" storyboardName="Home" referencedIdentifier="Home" id="Kw3-fC-VL8" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="HomeViewController" storyboardName="Home" referencedIdentifier="HomeViewController" id="Kw3-fC-VL8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" id="Bwu-No-uxw"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xtl-Om-7CP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="314" y="-27"/>
         </scene>
-        <!--Search-->
+        <!--SearchViewController-->
         <scene sceneID="3Eh-cu-zVK">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Search" storyboardName="Search" referencedIdentifier="Search" id="vC8-gZ-TA7" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="SearchViewController" storyboardName="Search" referencedIdentifier="SearchViewController" id="vC8-gZ-TA7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="bpV-N5-EUj"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gvN-iz-fN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -72,20 +72,20 @@
             </objects>
             <point key="canvasLocation" x="-358" y="62"/>
         </scene>
-        <!--Genre-->
+        <!--GenreViewController-->
         <scene sceneID="yH5-u0-dJp">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Genre" storyboardName="Genre" referencedIdentifier="Genre" id="6WF-3U-9b5" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="GenreViewController" storyboardName="Genre" referencedIdentifier="GenreViewController" id="6WF-3U-9b5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="PI2-6X-VcL"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YXG-fT-7t3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="315" y="88"/>
         </scene>
-        <!--Favorite-->
+        <!--FavoriteViewController-->
         <scene sceneID="QSw-sD-GOQ">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Favorite" storyboardName="Favorite" referencedIdentifier="Favorite" id="Nof-ZB-wbt" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="FavoriteViewController" storyboardName="Favorite" referencedIdentifier="FavoriteViewController" id="Nof-ZB-wbt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ecB-6f-VQp"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mV-VF-tqO" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -13,7 +13,7 @@
         <!--Home-->
         <scene sceneID="DQB-eL-pMq">
             <objects>
-                <viewController storyboardIdentifier="Home" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0I1-a7-liD" customClass="HomeViewController" customModule="SoundGood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0I1-a7-liD" customClass="HomeViewController" customModule="SoundGood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g7g-tm-jud">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

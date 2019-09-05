@@ -13,7 +13,7 @@
         <!--Favorite-->
         <scene sceneID="pRS-kn-RHF">
             <objects>
-                <viewController storyboardIdentifier="Favorite" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YX0-ra-WlE" customClass="FavoriteViewController" customModule="SoundGood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YX0-ra-WlE" customClass="FavoriteViewController" customModule="SoundGood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4P9-5S-e4p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,21 +67,24 @@ All in one place.</string>
                                     <action selector="navigateToFavorites:" destination="YX0-ra-WlE" eventType="touchUpInside" id="XxR-X5-4Yq"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-right" highlightedImage="chevron-right-highlighted" translatesAutoresizingMaskIntoConstraints="NO" id="tE3-5J-55g">
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-right" highlightedImage="chevron-right-highlighted" translatesAutoresizingMaskIntoConstraints="NO" id="tE3-5J-55g" customClass="ImageButton" customModule="SoundGood" customModuleProvider="target">
                                 <rect key="frame" x="378" y="190" width="36" height="36"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="9oE-zx-B28"/>
                                     <constraint firstAttribute="width" secondItem="tE3-5J-55g" secondAttribute="height" multiplier="1:1" id="j7r-rd-hDJ"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-right" highlightedImage="chevron-right-highlighted" translatesAutoresizingMaskIntoConstraints="NO" id="1GR-t7-fsa">
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-right" highlightedImage="chevron-right-highlighted" translatesAutoresizingMaskIntoConstraints="NO" id="1GR-t7-fsa" customClass="ImageButton" customModule="SoundGood" customModuleProvider="target">
                                 <rect key="frame" x="378" y="231" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1GR-t7-fsa" secondAttribute="height" multiplier="1:1" id="mYx-PW-Fh8"/>
                                     <constraint firstAttribute="height" constant="36" id="s5y-qx-gn9"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-right" highlightedImage="chevron-right-highlighted" translatesAutoresizingMaskIntoConstraints="NO" id="8uL-jR-vvK">
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-right" highlightedImage="chevron-right-highlighted" translatesAutoresizingMaskIntoConstraints="NO" id="8uL-jR-vvK" customClass="ImageButton" customModule="SoundGood" customModuleProvider="target">
                                 <rect key="frame" x="378" y="677" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="mbo-4W-cuV"/>

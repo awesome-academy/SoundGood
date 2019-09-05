@@ -13,7 +13,7 @@
         <!--Playlist View Controller-->
         <scene sceneID="AQH-3N-4HH">
             <objects>
-                <viewController id="XOE-p3-vds" customClass="PlaylistViewController" customModule="SoundGood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlaylistViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XOE-p3-vds" customClass="PlaylistViewController" customModule="SoundGood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CJa-4A-TFT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

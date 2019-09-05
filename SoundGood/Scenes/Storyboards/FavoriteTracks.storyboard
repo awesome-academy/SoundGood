@@ -13,7 +13,7 @@
         <!--Favorite Tracks View Controller-->
         <scene sceneID="cqS-SI-ojG">
             <objects>
-                <viewController id="N0F-Kp-Ncz" customClass="FavoriteTracksViewController" customModule="SoundGood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteTracksViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="N0F-Kp-Ncz" customClass="FavoriteTracksViewController" customModule="SoundGood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aAr-L3-mug">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
