@@ -35,8 +35,9 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.topItem?.title = "Home"
     }
 
-    @IBAction func segmentActionChanged(_ sender: Any) {
-        getData()
+    deinit {
+        viewModel.trackObservable.dispose()
+        viewModel.errorObservable.dispose()
     }
 
     private func setupTableView() {
@@ -66,13 +67,21 @@ class HomeViewController: UIViewController {
         default:
             kind = "top"
         }
-        viewModel.getHomeTracks(kind: kind) { [weak self] (response, _) in
-            guard let response = response else { return }
-            DispatchQueue.main.async {
-                self?.tracks = response
-                self?.trackTableView.reloadData()
+
+        viewModel.getHomeTracks(kind: kind)
+        viewModel.trackObservable.subscribe(DispatchQueue.main) { [weak self] newValue in
+            self?.tracks = newValue
+            self?.trackTableView.reloadData()
+        }
+        viewModel.errorObservable.subscribe(DispatchQueue.main) { [weak self] errors in
+            if !errors.isEmpty {
+                
             }
         }
+    }
+
+    @IBAction func segmentActionChanged(_ sender: Any) {
+        getData()
     }
 }
 
