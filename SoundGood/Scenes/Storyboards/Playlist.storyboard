@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XOE-p3-vds">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Playlist View Controller-->
+        <scene sceneID="AQH-3N-4HH">
+            <objects>
+                <viewController id="XOE-p3-vds" customClass="PlaylistViewController" customModule="SoundGood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CJa-4A-TFT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LZM-86-jbi">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LZM-86-jbi" firstAttribute="leading" secondItem="zyu-Cx-34s" secondAttribute="leading" id="178-2h-EjD"/>
+                            <constraint firstItem="zyu-Cx-34s" firstAttribute="trailing" secondItem="LZM-86-jbi" secondAttribute="trailing" id="IDl-Mt-mhA"/>
+                            <constraint firstItem="LZM-86-jbi" firstAttribute="top" secondItem="zyu-Cx-34s" secondAttribute="top" id="V4K-0y-jCj"/>
+                            <constraint firstItem="zyu-Cx-34s" firstAttribute="bottom" secondItem="LZM-86-jbi" secondAttribute="bottom" id="XOh-Tc-3kL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zyu-Cx-34s"/>
+                    </view>
+                    <connections>
+                        <outlet property="playlistTableView" destination="LZM-86-jbi" id="z09-t3-cQc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E42-ir-Acf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
