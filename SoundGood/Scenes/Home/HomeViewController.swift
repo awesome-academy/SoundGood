@@ -85,7 +85,8 @@ class HomeViewController: UIViewController {
                 self?.updateTracks(data: trackResult)
                 completion?()
             case .failure(let error):
-                guard error != nil else { return }
+                guard let error = error else { return }
+                self?.showErrorAlert(message: error.errorMessage)
             }
         }
     }

@@ -7,7 +7,9 @@
 //
 
 protocol TrackDataSource {
-    func getTracksByKind(kind: String, limit: Int, completion: @escaping (BaseResult<HomeTrackResponse>) -> Void)
+    func getTracksByKind(kind: String, limit: Int, completion: @escaping (BaseResult<HomeResponse>) -> Void)
+
+    func searchTrack(with text: String, limit: Int, completion: @escaping (BaseResult<SearchResponse>) -> Void)
 }
 
 class TrackRemoteDataSource: TrackDataSource {
@@ -18,9 +20,24 @@ class TrackRemoteDataSource: TrackDataSource {
         self.apiService = apiService
     }
 
-    func getTracksByKind(kind: String, limit: Int, completion: @escaping (BaseResult<HomeTrackResponse>) -> Void) {
+    func getTracksByKind(kind: String, limit: Int, completion: @escaping (BaseResult<HomeResponse>) -> Void) {
         let input = HomeRequest(url: ApiConstant.ApiChartUrl, kind: kind, limit: limit)
-        apiService.request(input: input) { (object: HomeTrackResponse?, error) in
+        apiService.request(input: input) { (object: HomeResponse?, error) in
+            guard let collection = object else {
+                guard let error = error else {
+                    completion(.failure(error: nil))
+                    return
+                }
+                completion(.failure(error: error as? BaseError))
+                return
+            }
+            completion(.success(collection))
+        }
+    }
+
+    func searchTrack(with text: String, limit: Int, completion: @escaping (BaseResult<SearchResponse>) -> Void) {
+        let input = SearchRequest(url: ApiConstant.ApiSearchTrackUrl, keyword: text, limit: limit)
+        apiService.request(input: input) { (object: SearchResponse?, error) in
             guard let collection = object else {
                 guard let error = error else {
                     completion(.failure(error: nil))

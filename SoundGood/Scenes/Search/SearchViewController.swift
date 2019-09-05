@@ -15,7 +15,13 @@ class SearchViewController: UIViewController {
     @IBOutlet private weak var trackResultTableView: UITableView!
 
     // MARK: - Variables
-    private var searchedTracks = [String]()
+    private let viewModel: SearchViewModel = {
+        let remote = TrackRemoteDataSource(apiService: ApiService.shared)
+        let repository = TrackDataRepository(remoteDataSource: remote)
+        let viewModel = SearchViewModel(repository: repository)
+        return viewModel
+    }()
+    private var searchedTracks = [Track]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +30,12 @@ class SearchViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController?.navigationBar.topItem?.title = "Search"
+    }
+
+    deinit {
+        viewModel.trackObservable.dispose()
     }
 
     private func setupSearchBar() {
@@ -36,6 +47,29 @@ class SearchViewController: UIViewController {
         trackResultTableView.delegate = self
         trackResultTableView.register(cellType: TrackTableViewCell.self)
     }
+
+    private func observeData() {
+        viewModel.trackObservable.subscribe(DispatchQueue.main) { [weak self] result in
+            guard let response = result else { return }
+            switch response {
+            case .success(let searchResponse):
+                var data = [Track]()
+                guard let collection = searchResponse?.collection else { return }
+                for track in collection {
+                    data.append(track)
+                }
+                self?.updateTracks(data: data)
+            case .failure(let error):
+                guard let error = error else { return }
+                self?.showErrorAlert(message: error.errorMessage)
+            }
+        }
+    }
+
+    private func updateTracks(data: [Track]) {
+        searchedTracks = data
+        trackResultTableView.reloadData()
+    }
 }
 
 // MARK: - TableView DataSource
@@ -45,7 +79,11 @@ extension SearchViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return trackResultTableView.dequeueReusableCell(for: indexPath) as TrackTableViewCell
+        let cell = trackResultTableView.dequeueReusableCell(for: indexPath) as TrackTableViewCell
+        if searchedTracks.indices.contains(indexPath.row) {
+            cell.setup(track: searchedTracks[indexPath.row])
+        }
+        return cell
     }
 }
 
@@ -53,6 +91,10 @@ extension SearchViewController: UITableViewDataSource {
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(TableViewConstant.heightForTableViewCell)
     }
 }
 
@@ -68,6 +110,7 @@ extension SearchViewController: UISearchBarDelegate {
         guard let query = searchBar.text, !query.isEmpty else {
             return
         }
-        trackResultTableView.reloadData()
+        viewModel.searchTracks(with: query)
+        observeData()
     }
 }
