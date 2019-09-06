@@ -36,7 +36,7 @@ class HomeViewController: UIViewController {
     }
 
     deinit {
-        viewModel.observable.dispose()
+        viewModel.trackObservable.dispose()
     }
 
     private func setupTableView() {
@@ -68,9 +68,12 @@ class HomeViewController: UIViewController {
         default:
             kind = "top"
         }
-
         viewModel.getHomeTracks(kind: kind)
-        viewModel.observable.subscribe(DispatchQueue.main) { [weak self] result in
+        observeData(completion: completion)
+    }
+
+    private func observeData(completion: (() -> Void)? = nil) {
+        viewModel.trackObservable.subscribe(DispatchQueue.main) { [weak self] result in
             guard let response = result else { return }
             switch response {
             case .success(let homeResponse):
@@ -79,13 +82,17 @@ class HomeViewController: UIViewController {
                 for item in collection {
                     trackResult.append(item.track)
                 }
-                self?.tracks = trackResult
-                self?.trackTableView.reloadData()
+                self?.updateTracks(data: trackResult)
                 completion?()
             case .failure(let error):
                 guard error != nil else { return }
             }
         }
+    }
+
+    private func updateTracks(data: [Track]) {
+        tracks = data
+        trackTableView.reloadData()
     }
 
     @IBAction func segmentActionChanged(_ sender: Any) {
@@ -102,7 +109,7 @@ extension HomeViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: TrackTableViewCell = trackTableView.dequeueReusableCell(for: indexPath)
-        if !tracks.isEmpty {
+        if tracks.indices.contains(indexPath.row) {
             cell.setup(track: tracks[indexPath.row])
         }
         return cell

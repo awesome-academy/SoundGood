@@ -8,7 +8,7 @@
 
 class HomeViewModel {
     private let repository: TrackRepository
-    let observable: Observable<BaseResult<HomeTrackResponse>> = Observable()
+    let trackObservable: Observable<BaseResult<HomeTrackResponse>> = Observable()
 
     init(repository: TrackRepository) {
         self.repository = repository
@@ -16,7 +16,7 @@ class HomeViewModel {
 
     func getHomeTracks(kind: String) {
         repository.getTracksByKind(kind: kind, limit: Constant.requestLimit) { [weak self] response in
-            self?.observable.value = response
+            self?.trackObservable.value = response
         }
     }
 }
