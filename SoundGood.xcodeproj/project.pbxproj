@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1401BF142321F20000DB4FE0 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1401BF132321F20000DB4FE0 /* ApiKey.swift */; };
+		1461E6862320D32F00EDA556 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1461E6852320D32F00EDA556 /* Observable.swift */; };
 		14683A5123139AD4007C0AFC /* GenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14683A5023139AD4007C0AFC /* GenreViewController.swift */; };
 		146CCA7E231F485C00BF0762 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146CCA7D231F485C00BF0762 /* ImageButton.swift */; };
+		146CCA80231F5D6E00BF0762 /* BaseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146CCA7F231F5D6E00BF0762 /* BaseResult.swift */; };
+		146CCA82231F663F00BF0762 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146CCA81231F663F00BF0762 /* HomeViewModel.swift */; };
+		146CCA84231F6C7900BF0762 /* HomeTrackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146CCA83231F6C7900BF0762 /* HomeTrackResponse.swift */; };
+		146CCA86231F6D0600BF0762 /* TrackCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146CCA85231F6D0600BF0762 /* TrackCollection.swift */; };
 		147D1614230FBBB500150D56 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147D1613230FBBB500150D56 /* Search.storyboard */; };
 		147D1616230FBDB400150D56 /* Genre.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147D1615230FBDB400150D56 /* Genre.storyboard */; };
 		147D1618230FBFB700150D56 /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147D1617230FBFB700150D56 /* Favorite.storyboard */; };
@@ -23,6 +29,10 @@
 		14B716E3231DF47E00378625 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B716E2231DF47E00378625 /* Track.swift */; };
 		14B716E5231DFE6900378625 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B716E4231DFE6900378625 /* History.storyboard */; };
 		14B716E7231E034100378625 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B716E6231E034100378625 /* HistoryViewController.swift */; };
+		14B716E9231E1FF100378625 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B716E8231E1FF100378625 /* ApiService.swift */; };
+		14B716ED231E433F00378625 /* TrackDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B716EC231E433F00378625 /* TrackDataSource.swift */; };
+		14B716F1231E4F4300378625 /* ApiConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B716F0231E4F4300378625 /* ApiConstant.swift */; };
+		14B716F3231E508E00378625 /* HomeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B716F2231E508E00378625 /* HomeRequest.swift */; };
 		14BBC1532319196000A16C12 /* FavoriteTracks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BBC1522319196000A16C12 /* FavoriteTracks.storyboard */; };
 		14BBC155231919A400A16C12 /* FavoriteTracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BBC154231919A400A16C12 /* FavoriteTracksViewController.swift */; };
 		14BBC15723193FFF00A16C12 /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BBC15623193FFF00A16C12 /* PlaylistViewController.swift */; };
@@ -52,8 +62,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1401BF132321F20000DB4FE0 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
+		1461E6852320D32F00EDA556 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		14683A5023139AD4007C0AFC /* GenreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreViewController.swift; sourceTree = "<group>"; };
 		146CCA7D231F485C00BF0762 /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
+		146CCA7F231F5D6E00BF0762 /* BaseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResult.swift; sourceTree = "<group>"; };
+		146CCA81231F663F00BF0762 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = ../../ViewModels/HomeViewModel.swift; sourceTree = "<group>"; };
+		146CCA83231F6C7900BF0762 /* HomeTrackResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrackResponse.swift; sourceTree = "<group>"; };
+		146CCA85231F6D0600BF0762 /* TrackCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollection.swift; sourceTree = "<group>"; };
 		147D1613230FBBB500150D56 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		147D1615230FBDB400150D56 /* Genre.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Genre.storyboard; sourceTree = "<group>"; };
 		147D1617230FBFB700150D56 /* Favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
@@ -68,6 +84,10 @@
 		14B716E2231DF47E00378625 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		14B716E4231DFE6900378625 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		14B716E6231E034100378625 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		14B716E8231E1FF100378625 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		14B716EC231E433F00378625 /* TrackDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDataSource.swift; sourceTree = "<group>"; };
+		14B716F0231E4F4300378625 /* ApiConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstant.swift; sourceTree = "<group>"; };
+		14B716F2231E508E00378625 /* HomeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRequest.swift; sourceTree = "<group>"; };
 		14BBC1522319196000A16C12 /* FavoriteTracks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoriteTracks.storyboard; sourceTree = "<group>"; };
 		14BBC154231919A400A16C12 /* FavoriteTracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTracksViewController.swift; sourceTree = "<group>"; };
 		14BBC15623193FFF00A16C12 /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +145,7 @@
 		147D161E230FD21900150D56 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				146CCA81231F663F00BF0762 /* HomeViewModel.swift */,
 				147D161F230FD23100150D56 /* TrackTableViewCell.swift */,
 				147D1623230FD2CF00150D56 /* HomeViewController.swift */,
 				147D1620230FD23100150D56 /* TrackTableViewCell.xib */,
@@ -179,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				14D22803230E7E180023D2C3 /* BaseRequest.swift */,
+				14B716F2231E508E00378625 /* HomeRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -186,6 +208,7 @@
 		14D227FD230E7C160023D2C3 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				146CCA83231F6C7900BF0762 /* HomeTrackResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -193,6 +216,7 @@
 		14D22802230E7DFD0023D2C3 /* Middleware */ = {
 			isa = PBXGroup;
 			children = (
+				146CCA7F231F5D6E00BF0762 /* BaseResult.swift */,
 			);
 			path = Middleware;
 			sourceTree = "<group>";
@@ -246,6 +270,8 @@
 			children = (
 				14E18A4D230E3AD700AA6241 /* AppDelegate.swift */,
 				14E18A79230E669700AA6241 /* Constant.swift */,
+				14B716F0231E4F4300378625 /* ApiConstant.swift */,
+				1401BF132321F20000DB4FE0 /* ApiKey.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -253,6 +279,7 @@
 		14E18A63230E3BF300AA6241 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1461E6852320D32F00EDA556 /* Observable.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -274,6 +301,7 @@
 				14DB21AB2314E88900B65091 /* Genre.swift */,
 				14B716E0231DF47200378625 /* Playlist.swift */,
 				14B716E2231DF47E00378625 /* Track.swift */,
+				146CCA85231F6D0600BF0762 /* TrackCollection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,6 +330,7 @@
 				14E18A6A230E3C2C00AA6241 /* Service */,
 				14E18A69230E3C2800AA6241 /* API */,
 				14D227F7230E78A50023D2C3 /* RemoteDataSource.swift */,
+				14B716EC231E433F00378625 /* TrackDataSource.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -320,6 +349,7 @@
 		14E18A6A230E3C2C00AA6241 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				14B716E8231E1FF100378625 /* ApiService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -556,6 +586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14F100C32317713F00537827 /* FavoriteViewController.swift in Sources */,
+				1401BF142321F20000DB4FE0 /* ApiKey.swift in Sources */,
 				14B716E1231DF47200378625 /* Playlist.swift in Sources */,
 				14683A5123139AD4007C0AFC /* GenreViewController.swift in Sources */,
 				14DB21A72314C7D200B65091 /* GenreRepository.swift in Sources */,
@@ -564,24 +595,33 @@
 				14D227F8230E78A50023D2C3 /* RemoteDataSource.swift in Sources */,
 				14DB21A52314C64300B65091 /* GenreDataSource.swift in Sources */,
 				14E18A56230E3AD700AA6241 /* SoundGood.xcdatamodeld in Sources */,
+				146CCA86231F6D0600BF0762 /* TrackCollection.swift in Sources */,
 				14F768D32313B4ED007C9C8C /* GenreTableViewCell.swift in Sources */,
 				14D22801230E7D230023D2C3 /* ErrorResponse.swift in Sources */,
 				14DB21AC2314E88900B65091 /* Genre.swift in Sources */,
 				14D22804230E7E180023D2C3 /* BaseRequest.swift in Sources */,
 				14BBC155231919A400A16C12 /* FavoriteTracksViewController.swift in Sources */,
+				14B716ED231E433F00378625 /* TrackDataSource.swift in Sources */,
 				14B716E3231DF47E00378625 /* Track.swift in Sources */,
 				147D1621230FD23100150D56 /* TrackTableViewCell.swift in Sources */,
+				146CCA82231F663F00BF0762 /* HomeViewModel.swift in Sources */,
+				146CCA80231F5D6E00BF0762 /* BaseResult.swift in Sources */,
 				14D227FA230E7A340023D2C3 /* TrackRepository.swift in Sources */,
 				149CC4C12316279500932199 /* TrackByGenreViewController.swift in Sources */,
+				14B716E9231E1FF100378625 /* ApiService.swift in Sources */,
 				14E18A7A230E669700AA6241 /* Constant.swift in Sources */,
 				14B716E7231E034100378625 /* HistoryViewController.swift in Sources */,
+				14B716F1231E4F4300378625 /* ApiConstant.swift in Sources */,
 				149CC4C6231679B100932199 /* SearchViewController.swift in Sources */,
 				14D227FF230E7C270023D2C3 /* BaseError.swift in Sources */,
 				149CC4C3231628EC00932199 /* Storyboards.swift in Sources */,
 				14BBC15723193FFF00A16C12 /* PlaylistViewController.swift in Sources */,
+				1461E6862320D32F00EDA556 /* Observable.swift in Sources */,
+				146CCA84231F6C7900BF0762 /* HomeTrackResponse.swift in Sources */,
 				147D1624230FD2CF00150D56 /* HomeViewController.swift in Sources */,
 				146CCA7E231F485C00BF0762 /* ImageButton.swift in Sources */,
 				14D227F4230E76510023D2C3 /* BaseModel.swift in Sources */,
+				14B716F3231E508E00378625 /* HomeRequest.swift in Sources */,
 				14DB21AA2314CA1300B65091 /* GenreViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

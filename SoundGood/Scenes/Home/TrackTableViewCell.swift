@@ -8,6 +8,7 @@
 
 import UIKit
 import Reusable
+import SDWebImage
 
 final class TrackTableViewCell: UITableViewCell, NibReusable {
 
@@ -21,6 +22,8 @@ final class TrackTableViewCell: UITableViewCell, NibReusable {
     }
 
     func setup(track: Track) {
-        trackTitle.text = track.name
+        trackTitle.text = track.title
+        trackArtist.text = track.artist
+        trackImage.sd_setImage(with: URL(string: track.artWorkUrl))
     }
 }
