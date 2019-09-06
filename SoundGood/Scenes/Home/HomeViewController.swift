@@ -36,8 +36,7 @@ class HomeViewController: UIViewController {
     }
 
     deinit {
-        viewModel.trackObservable.dispose()
-        viewModel.errorObservable.dispose()
+        viewModel.observable.dispose()
     }
 
     private func setupTableView() {
@@ -57,6 +56,7 @@ class HomeViewController: UIViewController {
         tracks = [Track]()
         getData { [weak self] in
             self?.refreshControl.endRefreshing()
+            self?.trackTableView.reloadData()
         }
     }
 
@@ -70,14 +70,20 @@ class HomeViewController: UIViewController {
         }
 
         viewModel.getHomeTracks(kind: kind)
-        viewModel.trackObservable.subscribe(DispatchQueue.main) { [weak self] newValue in
-            self?.tracks = newValue
-            self?.trackTableView.reloadData()
-            completion?()
-        }
-        viewModel.errorObservable.subscribe(DispatchQueue.main) { errors in
-            if !errors.isEmpty {
-
+        viewModel.observable.subscribe(DispatchQueue.main) { [weak self] result in
+            guard let response = result else { return }
+            switch response {
+            case .success(let homeResponse):
+                guard let collection = homeResponse?.trackCollection else { return }
+                var trackResult = [Track]()
+                for item in collection {
+                    trackResult.append(item.track)
+                }
+                self?.tracks = trackResult
+                self?.trackTableView.reloadData()
+                completion?()
+            case .failure(let error):
+                guard error != nil else { return }
             }
         }
     }

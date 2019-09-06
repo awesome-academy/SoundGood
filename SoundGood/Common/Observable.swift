@@ -10,12 +10,12 @@ import Foundation
 
 class Observable<T> {
 
-    public typealias Observer = (T) -> Void
+    public typealias Observer = (T?) -> Void
 
     private var observers: [Int: (Observer, DispatchQueue?)] = [:]
     private var uniqueId = (0...).makeIterator()
     fileprivate let semaphore = DispatchSemaphore(value: 1)
-    fileprivate var _value: T {
+    fileprivate var _value: T? {
         didSet {
             let newValue = _value
             observers.values.forEach { subscriber, dispatchQueue in
@@ -30,7 +30,7 @@ class Observable<T> {
         }
     }
 
-    public var value: T {
+    public var value: T? {
         get {
             return _value
         }
@@ -41,7 +41,7 @@ class Observable<T> {
         }
     }
 
-    init(_ value: T) {
+    init(_ value: T? = nil) {
         self._value = value
     }
 
