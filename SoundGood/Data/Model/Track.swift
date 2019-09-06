@@ -10,14 +10,16 @@ import ObjectMapper
 
 struct Track: BaseModel {
 
-    var trackId: Int?
-    var title: String?
-    var artist: String?
-    var artWorkUrl: String?
-    var streamUrl: String?
-    var fullDuration: Int?
-    var policy: String?
-    private var uri: String?
+    var trackId: Int = 0
+    var title: String = ""
+    var artist: String = ""
+    var artWorkUrl: String = ""
+    var fullDuration: Int = 0
+    var policy: String = ""
+    private var uri: String = ""
+    var streamUrl: String {
+        return uri + "/stream"
+    }
 
     init() {
     }
@@ -32,7 +34,6 @@ struct Track: BaseModel {
         artist <- map["user.username"]
         artWorkUrl <- map["artwork_url"]
         uri <- map["uri"]
-        streamUrl = uri ?? "" + "/stream"
         fullDuration <- map["full_duration"]
         policy <- map["policy"]
     }

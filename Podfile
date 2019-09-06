@@ -10,4 +10,5 @@ target 'SoundGood' do
   pod 'ObjectMapper', '~> 3.4'
   pod 'AlamofireObjectMapper', '~> 5.2'
   pod 'Reusable', '~> 4.0.2'
+  pod 'SDWebImage', '~> 5.0'
 end

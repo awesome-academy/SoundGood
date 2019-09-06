@@ -7,7 +7,6 @@
 //
 
 struct ApiConstant {
-    static let apiKey = "7c8ae3eed403b61716254856c4155475"
     private static var ApiBaseUrl = "https://api-v2.soundcloud.com"
     static let ApiSearchTrackUrl = ApiBaseUrl + "/search/tracks"
     static let ApiChartUrl = ApiBaseUrl + "/charts"

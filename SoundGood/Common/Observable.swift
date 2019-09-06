@@ -14,7 +14,7 @@ class Observable<T> {
 
     private var observers: [Int: (Observer, DispatchQueue?)] = [:]
     private var uniqueId = (0...).makeIterator()
-    fileprivate let lock: Lock = Mutex()
+    fileprivate let semaphore = DispatchSemaphore(value: 1)
     fileprivate var _value: T {
         didSet {
             let newValue = _value
@@ -35,9 +35,9 @@ class Observable<T> {
             return _value
         }
         set {
-            lock.lock()
-            defer { lock.unlock() }
+            semaphore.wait()
             _value = newValue
+            semaphore.signal()
         }
     }
 
@@ -46,11 +46,11 @@ class Observable<T> {
     }
 
     func subscribe(_ queue: DispatchQueue? = nil, _ observer: @escaping Observer) {
-        lock.lock()
-        defer { lock.unlock() }
+        semaphore.wait()
         let subscriberId = uniqueId.next()!
         observers[subscriberId] = (observer, queue)
         observer(value)
+        semaphore.signal()
     }
 
     func dispose() {

@@ -55,11 +55,12 @@ class HomeViewController: UIViewController {
 
     @objc private func reloadData() {
         tracks = [Track]()
-        getData()
-        refreshControl.endRefreshing()
+        getData { [weak self] in
+            self?.refreshControl.endRefreshing()
+        }
     }
 
-    private func getData() {
+    private func getData(completion: (() -> Void)? = nil) {
         var kind = ""
         switch segmentController.titleForSegment(at: segmentController.selectedSegmentIndex) {
         case "New & Hot":
@@ -72,10 +73,11 @@ class HomeViewController: UIViewController {
         viewModel.trackObservable.subscribe(DispatchQueue.main) { [weak self] newValue in
             self?.tracks = newValue
             self?.trackTableView.reloadData()
+            completion?()
         }
-        viewModel.errorObservable.subscribe(DispatchQueue.main) { [weak self] errors in
+        viewModel.errorObservable.subscribe(DispatchQueue.main) { errors in
             if !errors.isEmpty {
-                
+
             }
         }
     }

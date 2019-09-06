@@ -31,6 +31,6 @@ class BaseRequest {
         self.url = url
         self.requestType = requestType
         self.body = body
-        self.body?["client_id"] = ApiConstant.apiKey
+        self.body?["client_id"] = ApiKey.apiKey
     }
 }

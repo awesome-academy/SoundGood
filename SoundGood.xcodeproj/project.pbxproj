@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1401BF142321F20000DB4FE0 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1401BF132321F20000DB4FE0 /* ApiKey.swift */; };
 		1461E6862320D32F00EDA556 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1461E6852320D32F00EDA556 /* Observable.swift */; };
-		1461E6882320EEEB00EDA556 /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1461E6872320EEEB00EDA556 /* Mutex.swift */; };
 		14683A5123139AD4007C0AFC /* GenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14683A5023139AD4007C0AFC /* GenreViewController.swift */; };
 		146CCA7E231F485C00BF0762 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146CCA7D231F485C00BF0762 /* ImageButton.swift */; };
 		146CCA80231F5D6E00BF0762 /* BaseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146CCA7F231F5D6E00BF0762 /* BaseResult.swift */; };
@@ -62,8 +62,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1401BF132321F20000DB4FE0 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 		1461E6852320D32F00EDA556 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		1461E6872320EEEB00EDA556 /* Mutex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutex.swift; sourceTree = "<group>"; };
 		14683A5023139AD4007C0AFC /* GenreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreViewController.swift; sourceTree = "<group>"; };
 		146CCA7D231F485C00BF0762 /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
 		146CCA7F231F5D6E00BF0762 /* BaseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResult.swift; sourceTree = "<group>"; };
@@ -271,6 +271,7 @@
 				14E18A4D230E3AD700AA6241 /* AppDelegate.swift */,
 				14E18A79230E669700AA6241 /* Constant.swift */,
 				14B716F0231E4F4300378625 /* ApiConstant.swift */,
+				1401BF132321F20000DB4FE0 /* ApiKey.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -279,7 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				1461E6852320D32F00EDA556 /* Observable.swift */,
-				1461E6872320EEEB00EDA556 /* Mutex.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -586,6 +586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14F100C32317713F00537827 /* FavoriteViewController.swift in Sources */,
+				1401BF142321F20000DB4FE0 /* ApiKey.swift in Sources */,
 				14B716E1231DF47200378625 /* Playlist.swift in Sources */,
 				14683A5123139AD4007C0AFC /* GenreViewController.swift in Sources */,
 				14DB21A72314C7D200B65091 /* GenreRepository.swift in Sources */,
@@ -612,7 +613,6 @@
 				14B716E7231E034100378625 /* HistoryViewController.swift in Sources */,
 				14B716F1231E4F4300378625 /* ApiConstant.swift in Sources */,
 				149CC4C6231679B100932199 /* SearchViewController.swift in Sources */,
-				1461E6882320EEEB00EDA556 /* Mutex.swift in Sources */,
 				14D227FF230E7C270023D2C3 /* BaseError.swift in Sources */,
 				149CC4C3231628EC00932199 /* Storyboards.swift in Sources */,
 				14BBC15723193FFF00A16C12 /* PlaylistViewController.swift in Sources */,
