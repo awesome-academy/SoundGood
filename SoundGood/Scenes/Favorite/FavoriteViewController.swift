@@ -47,17 +47,6 @@ class FavoriteViewController: UIViewController {
         historyTableView.isHidden = listenedTracks.isEmpty
     }
 
-    private func navigate(controller: UIViewController) {
-        let transition = CATransition()
-        transition.duration = 0.4
-        transition.type = .push
-        transition.subtype = .fromRight
-        transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-        guard let view = navigationController?.view else { return }
-        view.window?.layer.add(transition, forKey: kCATransition)
-        navigationController?.pushViewController(controller, animated: false)
-    }
-
     @IBAction func navigateToFavorites(_ sender: Any) {
         let controller = FavoriteTracksViewController.instantiate()
         favoriteImageView.isHighlighted = false

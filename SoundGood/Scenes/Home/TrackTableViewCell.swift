@@ -24,6 +24,6 @@ final class TrackTableViewCell: UITableViewCell, NibReusable {
     func setup(track: Track) {
         trackTitle.text = track.title
         trackArtist.text = track.artist
-        trackImage.sd_setImage(with: URL(string: track.artWorkUrl))
+        trackImage.sd_setImage(with: URL(string: track.artWorkUrl), placeholderImage: UIImage(named: "placeholder.png"))
     }
 }

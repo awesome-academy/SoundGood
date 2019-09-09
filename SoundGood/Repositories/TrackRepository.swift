@@ -10,6 +10,8 @@ protocol TrackRepository {
     func getTracksByKind(kind: String, limit: Int, completion: @escaping (BaseResult<HomeResponse>) -> Void)
 
     func searchTrack(with text: String, limit: Int, completion: @escaping (BaseResult<SearchResponse>) -> Void)
+
+    func getTracksByGenre(with key: String, limit: Int, completion: @escaping (BaseResult<HomeResponse>) -> Void)
 }
 
 class TrackDataRepository: TrackRepository {
@@ -26,5 +28,9 @@ class TrackDataRepository: TrackRepository {
 
     func searchTrack(with text: String, limit: Int, completion: @escaping (BaseResult<SearchResponse>) -> Void) {
         remoteDataSource.searchTrack(with: text, limit: limit, completion: completion)
+    }
+
+    func getTracksByGenre(with key: String, limit: Int, completion: @escaping (BaseResult<HomeResponse>) -> Void) {
+        remoteDataSource.getTracksByGenre(with: key, limit: limit, completion: completion)
     }
 }
