@@ -21,6 +21,7 @@ class SearchViewController: UIViewController {
         let viewModel = SearchViewModel(repository: repository)
         return viewModel
     }()
+    private var compositeDisposable = CompositeDisposable()
     private var searchedTracks = [Track]()
 
     override func viewDidLoad() {
@@ -54,18 +55,16 @@ class SearchViewController: UIViewController {
             guard let response = result else { return }
             switch response {
             case .success(let searchResponse):
-                var data = [Track]()
+
                 guard let collection = searchResponse?.collection else { return }
-                for track in collection {
-                    data.append(track)
-                }
+                let data = collection.map { $0 }
                 self?.updateTracks(data: data)
             case .failure(let error):
                 guard let error = error else { return }
                 self?.showErrorAlert(message: error.errorMessage)
             }
         }
-        viewModel.trackObservable.subscribe(DispatchQueue.main, observer)
+        viewModel.trackObservable.subscribe(on: DispatchQueue.main, observer).add(to: &compositeDisposable)
     }
 
     private func updateTracks(data: [Track]) {

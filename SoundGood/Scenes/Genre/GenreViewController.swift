@@ -55,11 +55,9 @@ class GenreViewController: UIViewController {
     }
 
     private func navigateToTrackByGenre(with data: Genre) {
-        guard let controller = Storyboards.trackByGenre.instantiateInitialViewController() as? TrackByGenreViewController else { return }
-        controller.genreTitle = data.title
-        guard let view = navigationController?.view else { return }
-        UIView.transition(with: view, duration: 0.2, options: .transitionCrossDissolve, animations: nil, completion: nil)
-        navigationController?.pushViewController(controller, animated: false)
+        let controller = TrackByGenreViewController.instantiate()
+        controller.genre = data
+        navigate(controller: controller)
     }
 }
 

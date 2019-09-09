@@ -24,7 +24,7 @@ final class PlaylistViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.topItem?.title = "Playlist"
+        title = "Playlist"
     }
 
     private func setupTableView() {

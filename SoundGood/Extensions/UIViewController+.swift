@@ -47,4 +47,8 @@ extension UIViewController {
         }
         self.present(alertViewController, animated: true, completion: nil)
     }
+
+    func navigate(controller: UIViewController) {
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }

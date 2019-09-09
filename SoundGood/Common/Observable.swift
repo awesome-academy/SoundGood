@@ -15,6 +15,7 @@ class Observable<T> {
     private var observers: [Int: (Observer, DispatchQueue?)] = [:]
     private var uniqueId = (0...).makeIterator()
     fileprivate let semaphore = DispatchSemaphore(value: 1)
+    fileprivate var onDispose: () -> Void
     fileprivate var _value: T? {
         didSet {
             let newValue = _value
@@ -41,16 +42,23 @@ class Observable<T> {
         }
     }
 
-    init(_ value: T? = nil) {
+    init(_ value: T? = nil, onDispose: @escaping () -> Void = { }) {
         self._value = value
+        self.onDispose = onDispose
     }
 
-    func subscribe(_ queue: DispatchQueue? = nil, _ observer: @escaping Observer) {
+    func subscribe(on queue: DispatchQueue? = nil, _ observer: @escaping Observer) -> Disposable {
         semaphore.wait()
         let subscriberId = uniqueId.next()!
         observers[subscriberId] = (observer, queue)
         observer(value)
         semaphore.signal()
+
+        let disposable = Disposable { [weak self] in
+            self?.observers[subscriberId] = nil
+            self?.onDispose()
+        }
+        return disposable
     }
 
     func dispose() {
