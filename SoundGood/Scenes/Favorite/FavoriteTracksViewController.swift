@@ -21,7 +21,7 @@ final class FavoriteTracksViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.topItem?.title = "Favorite tracks"
+        title = "Favorite tracks"
     }
 
 }

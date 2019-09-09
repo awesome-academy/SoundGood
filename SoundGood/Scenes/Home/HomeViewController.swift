@@ -22,6 +22,7 @@ class HomeViewController: UIViewController {
         return viewModel
     }()
     private let refreshControl = UIRefreshControl()
+    private var compositeDisposable = CompositeDisposable()
     private var tracks = [Track]()
 
     override func viewDidLoad() {
@@ -73,22 +74,19 @@ class HomeViewController: UIViewController {
     }
 
     private func observeData(completion: (() -> Void)? = nil) {
-        viewModel.trackObservable.subscribe(DispatchQueue.main) { [weak self] result in
+        viewModel.trackObservable.subscribe(on: DispatchQueue.main) { [weak self] result in
             guard let response = result else { return }
             switch response {
             case .success(let homeResponse):
                 guard let collection = homeResponse?.trackCollection else { return }
-                var trackResult = [Track]()
-                for item in collection {
-                    trackResult.append(item.track)
-                }
+                let trackResult = collection.map { $0.track }
                 self?.updateTracks(data: trackResult)
                 completion?()
             case .failure(let error):
                 guard let error = error else { return }
                 self?.showErrorAlert(message: error.errorMessage)
             }
-        }
+        }.add(to: &compositeDisposable)
     }
 
     private func updateTracks(data: [Track]) {

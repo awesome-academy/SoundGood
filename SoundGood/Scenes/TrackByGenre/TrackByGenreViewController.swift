@@ -23,6 +23,7 @@ final class TrackByGenreViewController: UIViewController {
         return viewModel
     }()
     private let refreshControl = UIRefreshControl()
+    private var compositeDisposable = CompositeDisposable()
     private var tracks = [Track]()
 
     // MARK: - Lifecycle
@@ -33,7 +34,8 @@ final class TrackByGenreViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.topItem?.title = genre.title
+        super.viewWillAppear(animated)
+        title = genre.title
     }
 
     deinit {
@@ -67,22 +69,19 @@ final class TrackByGenreViewController: UIViewController {
     }
 
     private func observeData(completion: (() -> Void)? = nil) {
-        viewModel.trackObservable.subscribe(DispatchQueue.main) { [weak self] result in
+        viewModel.trackObservable.subscribe(on: DispatchQueue.main) { [weak self] result in
             guard let response = result else { return }
             switch response {
             case .success(let trackResponse):
                 guard let collection = trackResponse?.trackCollection else { return }
-                var data = [Track]()
-                for item in collection {
-                    data.append(item.track)
-                }
+                let data = collection.map { $0.track }
                 self?.updateTracks(data: data)
                 completion?()
             case .failure(let error):
                 guard let error = error else { return }
                 self?.showErrorAlert(message: error.errorMessage)
             }
-        }
+        }.add(to: &compositeDisposable)
     }
 
     private func updateTracks(data: [Track]) {

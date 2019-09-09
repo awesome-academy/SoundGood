@@ -23,7 +23,7 @@ class HistoryViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.topItem?.title = "History"
+        title = "History"
     }
 
     private func setupTableView() {

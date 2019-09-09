@@ -44,6 +44,7 @@
 		14BBC15723193FFF00A16C12 /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BBC15623193FFF00A16C12 /* PlaylistViewController.swift */; };
 		14BBC1592319401500A16C12 /* Playlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BBC1582319401500A16C12 /* Playlist.storyboard */; };
 		14C05283230F8D1100B74529 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C05282230F8D1100B74529 /* Home.storyboard */; };
+		14CE4EFE2325F0DB00BEE31D /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CE4EFD2325F0DB00BEE31D /* Disposable.swift */; };
 		14D227F4230E76510023D2C3 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D227F3230E76510023D2C3 /* BaseModel.swift */; };
 		14D227F6230E785F0023D2C3 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D227F5230E785F0023D2C3 /* LocalDataSource.swift */; };
 		14D227F8230E78A50023D2C3 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D227F7230E78A50023D2C3 /* RemoteDataSource.swift */; };
@@ -105,6 +106,7 @@
 		14BBC15623193FFF00A16C12 /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
 		14BBC1582319401500A16C12 /* Playlist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Playlist.storyboard; sourceTree = "<group>"; };
 		14C05282230F8D1100B74529 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		14CE4EFD2325F0DB00BEE31D /* Disposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
 		14D227F3230E76510023D2C3 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		14D227F5230E785F0023D2C3 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
 		14D227F7230E78A50023D2C3 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				1461E6852320D32F00EDA556 /* Observable.swift */,
+				14CE4EFD2325F0DB00BEE31D /* Disposable.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -632,6 +635,7 @@
 				149CC4C3231628EC00932199 /* Storyboards.swift in Sources */,
 				14BBC15723193FFF00A16C12 /* PlaylistViewController.swift in Sources */,
 				1461E6862320D32F00EDA556 /* Observable.swift in Sources */,
+				14CE4EFE2325F0DB00BEE31D /* Disposable.swift in Sources */,
 				146CCA84231F6C7900BF0762 /* HomeResponse.swift in Sources */,
 				147D1624230FD2CF00150D56 /* HomeViewController.swift in Sources */,
 				146CCA7E231F485C00BF0762 /* ImageButton.swift in Sources */,
