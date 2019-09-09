@@ -27,6 +27,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         setupSearchBar()
         setupTableView()
+        observeData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -49,7 +50,7 @@ class SearchViewController: UIViewController {
     }
 
     private func observeData() {
-        viewModel.trackObservable.subscribe(DispatchQueue.main) { [weak self] result in
+        let observer: Observable<BaseResult<SearchResponse>>.Observer = { [weak self] result in
             guard let response = result else { return }
             switch response {
             case .success(let searchResponse):
@@ -64,6 +65,7 @@ class SearchViewController: UIViewController {
                 self?.showErrorAlert(message: error.errorMessage)
             }
         }
+        viewModel.trackObservable.subscribe(DispatchQueue.main, observer)
     }
 
     private func updateTracks(data: [Track]) {
@@ -111,6 +113,5 @@ extension SearchViewController: UISearchBarDelegate {
             return
         }
         viewModel.searchTracks(with: query)
-        observeData()
     }
 }
